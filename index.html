@@ -4,21 +4,242 @@
   <meta charset="utf-8">
   <title>Rodrigo San Martín — Research</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { 
-      font-family: system-ui, sans-serif; 
-      max-width: 700px; 
-      margin: 3rem auto; 
-      line-height: 1.5;
-      color: #333;
-    }
-    h1 { margin-bottom: 0.2rem; }
-    .muted { color: #666; }
-  </style>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>Rodrigo San Martín</h1>
-  <p class="muted">Postdoctoral Researcher (CNRS / LSCE)</p>
-  <p>Academic website under construction. The full bilingual (EN/ES) version will be added soon.</p>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow mb-8">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div>
+        <h1 class="text-xl font-semibold">Rodrigo San Martín</h1>
+        <p class="text-xs text-gray-500" data-en="Postdoctoral Researcher · CNRS / LSCE"
+           data-es="Investigador postdoctoral · CNRS / LSCE"></p>
+      </div>
+      <div class="space-x-1">
+        <button id="lang-en" class="px-3 py-1 text-sm font-medium text-blue-600 border rounded-full">EN</button>
+        <button id="lang-es" class="px-3 py-1 text-sm text-gray-500 border rounded-full">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-5xl mx-auto px-4 pb-12 space-y-12">
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2 class="text-2xl font-semibold mb-3" data-en="About" data-es="Acerca de"></h2>
+      <p class="mb-2"
+         data-en="I am a Postdoctoral Researcher at CNRS / LSCE (France), working on fire–climate–land cover interactions in the South American Gran Chaco, Southeast Asia, and Southern Africa."
+         data-es="Soy investigador postdoctoral en el CNRS / LSCE (Francia) y trabajo en las interacciones entre fuego, clima y cobertura terrestre en el Gran Chaco sudamericano, el Sudeste Asiático y el sur de África.">
+      </p>
+      <p class="text-sm text-gray-700"
+         data-en="My work combines satellite remote sensing, climate reanalyses, and ecological modelling to understand how land use, vegetation structure, and atmospheric conditions shape fire regimes and forest loss."
+         data-es="Mi trabajo combina teledetección satelital, reanálisis climáticos y modelos ecológicos para entender cómo el uso del suelo, la estructura de la vegetación y las condiciones atmosféricas moldean los regímenes de fuego y la pérdida de bosques.">
+      </p>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <h2 class="text-2xl font-semibold mb-3" data-en="Research" data-es="Líneas de investigación"></h2>
+      <ul class="list-disc ml-6 space-y-1 text-sm">
+        <li data-en="Fire dynamics and morphology under different climate and land-cover regimes."
+            data-es="Dinámica y morfología del fuego bajo distintos regímenes de clima y cobertura del suelo."></li>
+        <li data-en="Deforestation, forest degradation and oil-palm expansion in tropical landscapes."
+            data-es="Deforestación, degradación de bosques y expansión de la palma aceitera en paisajes tropicales."></li>
+        <li data-en="Vegetation productivity (EVI, LAI) and land degradation in dry forests and savannas."
+            data-es="Productividad de la vegetación (EVI, LAI) y degradación de tierras en bosques secos y sabanas."></li>
+        <li data-en="Wind, topography and landscape configuration as controls of fire spread and fire size."
+            data-es="Viento, topografía y configuración del paisaje como controles de la propagación y tamaño de los incendios."></li>
+        <li data-en="AI-based, high-resolution land-cover mapping for climate and Earth system modelling (ESA HRLC)."
+            data-es="Mapeo de cobertura terrestre de alta resolución basado en IA para modelos de clima y del sistema terrestre (ESA HRLC)."></li>
+      </ul>
+    </section>
+
+    <!-- PUBLICATIONS & OUTPUT -->
+    <section id="publications">
+      <h2 class="text-2xl font-semibold mb-4" 
+          data-en="Publications & Scientific Output" 
+          data-es="Publicaciones y producción científica"></h2>
+
+      <!-- STATS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-sm">
+        <div class="bg-white rounded-lg shadow p-4">
+          <h3 class="font-semibold mb-1" data-en="Google Scholar (Nov 2025)" data-es="Google Scholar (nov 2025)"></h3>
+          <p data-en="132 citations · h-index = 4 · i10-index = 2"
+             data-es="132 citas · h-index = 4 · i10-index = 2"></p>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4">
+          <h3 class="font-semibold mb-1" data-en="ResearchGate (Nov 2025)" data-es="ResearchGate (nov 2025)"></h3>
+          <p data-en="124 citations · h-index = 3 · Research Interest Score = 132.8"
+             data-es="124 citas · h-index = 3 · Research Interest Score = 132.8"></p>
+        </div>
+      </div>
+
+      <!-- ARTICLES -->
+      <h3 class="font-semibold mt-4 mb-2 text-sm"
+          data-en="Peer-reviewed journal articles"
+          data-es="Artículos en revistas con revisión por pares"></h3>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>
+          San Martín, R., Ottlé, C., &amp; Sörensson, A. A. (2023). 
+          <em>Fires in the South American Chaco, from dry forests to wetlands: response to climate depends on land cover.</em>
+          <span class="italic">Fire Ecology</span>, 19, 57.
+          <a class="text-blue-600" href="https://fireecology.springeropen.com/articles/10.1186/s42408-023-00212-4" target="_blank" rel="noopener">Link</a>
+        </li>
+        <li>
+          Harper, K. L., Lamarche, C., Hartley, A., Peylin, P., Ottlé, C., Bastrikov, V., <strong>San Martín, R.</strong>, 
+          Bohnenstengel, S. I., Kirches, G., Boettcher, M., Shevchuk, R., Brockmann, C., &amp; Defourny, P. (2023).
+          <em>A 29-year time series of annual 300 m resolution plant-functional-type maps for climate models.</em>
+          <span class="italic">Earth System Science Data</span>, 15, 1465–1499.
+          <a class="text-blue-600" href="https://doi.org/10.5194/essd-15-1465-2023" target="_blank" rel="noopener">DOI</a>
+        </li>
+      </ul>
+
+      <!-- PREPRINT -->
+      <h3 class="font-semibold mt-6 mb-2 text-sm"
+          data-en="In review (available as preprint)"
+          data-es="En revisión (disponible como preprint)"></h3>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>
+          San Martín, R., Ottlé, C., Sörensson, A. A., Vaittinada Ayar, P., Mouillot, F., &amp; Malfante, M. (2025).
+          <em>What controls fire size in the South American Gran Chaco? Exploring atmospheric, landscape, and anthropogenic drivers.</em>
+          <span class="italic">EGUsphere</span> preprint.
+          <a class="text-blue-600" href="https://doi.org/10.5194/egusphere-2025-3484" target="_blank" rel="noopener">DOI</a>
+        </li>
+      </ul>
+
+      <!-- PHD THESIS -->
+      <h3 class="font-semibold mt-6 mb-2 text-sm" data-en="PhD thesis" data-es="Tesis doctoral"></h3>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>
+          San Martín, R. (2024). 
+          <em>Fires, land use, and forest loss in the South American Chaco: understanding the links between fires, climate, ecosystems, and human activity through remote sensing.</em>
+          Université Paris-Saclay.
+        </li>
+      </ul>
+
+      <!-- CONFERENCES -->
+      <h3 class="font-semibold mt-6 mb-2 text-sm"
+          data-en="Selected conference contributions and posters"
+          data-es="Contribuciones y pósteres seleccionados"></h3>
+      <h4 class="font-medium mb-1 text-sm"
+          data-en="International conferences"
+          data-es="Conferencias internacionales"></h4>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>
+          ESA Living Planet Symposium 2025 (LPS25), Vienna, Austria. Poster:
+          <em>Fires, Land Use, and Forest Loss in the South American Chaco: Links Between Fire Regimes, Climate, and Human Activity.</em>
+        </li>
+        <li>
+          EGU General Assembly 2023, Vienna, Austria. Poster/PICO:
+          <em>South American Chaco: fires, land-use and climate.</em>
+          <span data-en=" Awarded OSPP 2023." data-es=" Premio OSPP 2023."></span>
+        </li>
+        <li>
+          ESA Living Planet Symposium 2022 (LPS22), Bonn, Germany. Poster:
+          <em>HRLC/LMDZ – High Resolution Land Cover for climate modelling.</em>
+        </li>
+        <li>
+          CONGREMET 2022, Buenos Aires, Argentina. Poster:
+          <em>Characterizing the fire regime evolution and land use change in the dry and wet Chaco between 2001–2019.</em>
+        </li>
+      </ul>
+
+      <!-- INVITED TALKS -->
+      <h3 class="font-semibold mt-6 mb-2 text-sm"
+          data-en="Invited talks & panels"
+          data-es="Charlas invitadas y paneles"></h3>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>
+          One Sustainable Health for All 2023 Global Forum, Lyon, France. Plenary Session 4 panelist:
+          <em>“Better Ways to Better Futures: Next Generation One Sustainable Health Landscape.”</em>
+        </li>
+      </ul>
+
+      <!-- AWARDS -->
+      <h3 class="font-semibold mt-6 mb-2 text-sm"
+          data-en="Awards"
+          data-es="Premios"></h3>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>
+          EGU Outstanding Student and PhD candidate Presentation (OSPP) Award, 2023.
+          <a class="text-blue-600" href="https://www.egu.eu/awards-medals/ospp-award/2023/rodrigo-san-martin/" target="_blank" rel="noopener">Link</a>
+        </li>
+      </ul>
+
+      <!-- MEDIA -->
+      <h3 class="font-semibold mt-6 mb-2 text-sm"
+          data-en="Media and outreach"
+          data-es="Medios y divulgación"></h3>
+
+      <h4 class="font-medium mb-1 text-sm">ESA</h4>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>
+          <span data-en="ESA Climate Office news (2024): Satellites reveal fire drivers in global deforestation hotspot."
+                data-es="ESA Climate Office (2024): Los satélites revelan motores del fuego en un foco mundial de deforestación."></span>
+          <a class="text-blue-600" href="https://climate.esa.int/en/news-events/satellites-reveal-fire-drivers-in-global-deforestation-hotspot/" target="_blank" rel="noopener">Link</a>
+        </li>
+        <li>
+          <span data-en="ESA “Space for our Climate” feature (2025): Satellite records expose fire driving Gran Chaco transformation."
+                data-es="ESA “Space for our Climate” (2025): Los registros satelitales exponen el papel del fuego en la transformación del Gran Chaco."></span>
+          <a class="text-blue-600" href="https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Satellite_records_expose_fire_driving_Gran_Chaco_transformation" target="_blank" rel="noopener">Link</a>
+        </li>
+      </ul>
+
+      <h4 class="font-medium mb-1 text-sm" data-en="Podcast" data-es="Podcast"></h4>
+      <ul class="list-disc ml-6 space-y-2 text-sm">
+        <li>
+          TN Podcast (2023): <em>El fuego arrasa los bosques de América Latina.</em>
+          <a class="text-blue-600" href="https://tn.com.ar/podcasts/2023/03/15/el-fuego-arrasa-los-bosques-de-america-latina/" target="_blank" rel="noopener">Link</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="text-2xl font-semibold mb-3" data-en="Contact" data-es="Contacto"></h2>
+      <p class="text-sm">
+        Email: <a href="mailto:rodrigosanmartin@gmail.com" class="text-blue-600">rodrigosanmartin@gmail.com</a>
+      </p>
+      <p class="text-sm">
+        GitHub (code): <a href="https://github.com/Roderick-SM" class="text-blue-600">Roderick-SM</a>
+      </p>
+      <p class="text-sm">
+        <span data-en="Academic profiles (Google Scholar, ORCID, etc.) will be linked here."
+              data-es="Perfiles académicos (Google Scholar, ORCID, etc.) se enlazarán aquí."></span>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- LANGUAGE SCRIPT -->
+  <script>
+    const enBtn = document.getElementById('lang-en');
+    const esBtn = document.getElementById('lang-es');
+    const translatables = document.querySelectorAll('[data-en]');
+
+    function setLang(lang) {
+      translatables.forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (text !== null) el.textContent = text;
+      });
+      if (lang === 'en') {
+        enBtn.classList.add('text-blue-600');
+        esBtn.classList.remove('text-blue-600');
+      } else {
+        esBtn.classList.add('text-blue-600');
+        enBtn.classList.remove('text-blue-600');
+      }
+      localStorage.setItem('lang', lang);
+    }
+
+    enBtn.addEventListener('click', () => setLang('en'));
+    esBtn.addEventListener('click', () => setLang('es'));
+
+    setLang(localStorage.getItem('lang') || 'en');
+  </script>
+
 </body>
 </html>
