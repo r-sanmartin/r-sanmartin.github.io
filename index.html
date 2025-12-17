@@ -1,607 +1,524 @@
-diff --git a/index.html b/index.html
-index 852accc6231cd8100dc13744b14c7a43f05b3b3f..d0eb7320213d741130da0ff69b05e0d28eb89b69 100644
---- a/index.html
-+++ b/index.html
-@@ -1,445 +1,226 @@
- <!doctype html>
- <html lang="en">
- <head>
-   <meta charset="utf-8">
-   <title>Rodrigo San Martín — Research</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- Tailwind CDN -->
-   <script src="https://cdn.tailwindcss.com"></script>
- </head>
--<body class="bg-gray-50 text-gray-800 font-sans">
--
--  <!-- NAVBAR -->
--  <div class="flex items-center gap-4">
--    <div class="hidden md:flex gap-3 text-sm">
--      <a href="#latest" class="text-gray-600 hover:text-gray-900" data-en="Latest" data-es="Reciente"></a>
--      <a href="#research-latest" class="text-gray-600 hover:text-gray-900" data-en="Research" data-es="Research"></a>
--      <a href="#features-latest" class="text-gray-600 hover:text-gray-900" data-en="Features" data-es="Features"></a>
--      <a href="#conferences-latest" class="text-gray-600 hover:text-gray-900" data-en="Conferences" data-es="Conferencias"></a>
--      <a href="#publications" class="text-gray-600 hover:text-gray-900" data-en="Publications" data-es="Publicaciones"></a>
--      <a href="#contact" class="text-gray-600 hover:text-gray-900" data-en="Contact" data-es="Contacto"></a>
--    </div>
--    <div class="space-x-1">
--      <button id="lang-en" class="px-3 py-1 text-sm font-medium text-blue-600 border rounded-full">EN</button>
--      <button id="lang-es" class="px-3 py-1 text-sm text-gray-500 border rounded-full">ES</button>
--    </div>
--  </div>
--
--  <!-- MAIN CONTENT -->
--  <main class="max-w-5xl mx-auto px-4 pb-12 space-y-12">
--
--    <!-- ABOUT -->
--    <section id="about">
--      <h2 class="text-2xl font-semibold mb-3" data-en="About" data-es="Acerca de"></h2>
--      <p class="mb-2"
--         data-en="I am a Postdoctoral Researcher at CNRS / LSCE (France), working on fire–climate–land cover interactions in the South American Gran Chaco, Southeast Asia, and Southern Africa."
--         data-es="Soy investigador postdoctoral en el CNRS / LSCE (Francia) y trabajo en las interacciones entre fuego, clima y cobertura terrestre en el Gran Chaco sudamericano, el Sudeste Asiático y el sur de África.">
--      </p>
--      <p class="text-sm text-gray-700"
--         data-en="My work combines satellite remote sensing, climate reanalyses, and ecological modelling to understand how land use, vegetation structure, and atmospheric conditions shape fire regimes and forest loss."
--         data-es="Mi trabajo combina teledetección satelital, reanálisis climáticos y modelos ecológicos para entender cómo el uso del suelo, la estructura de la vegetación y las condiciones atmosféricas moldean los regímenes de fuego y la pérdida de bosques.">
--      </p>
-+<body class="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-slate-50">
-+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
-+
-+    <!-- NAVBAR / LANGUAGE SWITCHER -->
-+    <header class="flex items-center justify-between gap-4">
-+      <div>
-+        <p class="text-xs uppercase tracking-[0.2em] text-sky-400">CNRS / LSCE</p>
-+        <h1 class="text-2xl sm:text-3xl font-semibold">Rodrigo San Martín</h1>
-+        <p class="text-sm text-slate-300" data-en="Fire–climate–land interactions" data-es="Interacciones fuego–clima–cobertura del suelo"></p>
-+      </div>
-+      <div class="flex items-center gap-3">
-+        <nav class="hidden md:flex gap-4 text-sm text-slate-300">
-+          <a href="#latest" class="hover:text-white transition" data-en="Latest" data-es="Reciente"></a>
-+          <a href="#research-latest" class="hover:text-white transition" data-en="Research" data-es="Investigación"></a>
-+          <a href="#features-latest" class="hover:text-white transition" data-en="Features" data-es="Apariciones"></a>
-+          <a href="#conferences-latest" class="hover:text-white transition" data-en="Conferences" data-es="Conferencias"></a>
-+          <a href="#contact" class="hover:text-white transition" data-en="Contact" data-es="Contacto"></a>
-+        </nav>
-+        <div class="flex rounded-full border border-slate-700 bg-slate-800/60 overflow-hidden text-sm">
-+          <button id="lang-en" class="px-3 py-1 font-medium text-sky-400">EN</button>
-+          <button id="lang-es" class="px-3 py-1 text-slate-300">ES</button>
-+        </div>
-+      </div>
-+    </header>
-+
-+    <!-- HERO / INTRO -->
-+    <section class="bg-slate-800/60 border border-slate-700 rounded-2xl p-6 sm:p-8 shadow-xl backdrop-blur">
-+      <div class="grid md:grid-cols-[2fr,1fr] gap-6 items-center">
-+        <div class="space-y-3">
-+          <p class="text-sm text-slate-300" data-en="Postdoctoral Researcher at CNRS / LSCE (France)." data-es="Investigador postdoctoral en el CNRS / LSCE (Francia)."></p>
-+          <p class="text-lg text-slate-100" data-en="Studying how fire, climate, and land use transform ecosystems across the South American Gran Chaco, Southeast Asia, and Southern Africa." data-es="Estudio cómo el fuego, el clima y el uso del suelo transforman los ecosistemas en el Gran Chaco, el Sudeste Asiático y el sur de África."></p>
-+          <p class="text-sm text-slate-300" data-en="Chronological feed — newest research, features, and talks first." data-es="Cronología — lo más reciente en investigación, apariciones y charlas."></p>
-+        </div>
-+        <div class="justify-self-end hidden sm:block">
-+          <div class="h-32 w-32 rounded-2xl border border-slate-700 bg-gradient-to-br from-sky-500/40 via-slate-600/20 to-slate-800 shadow-inner"></div>
-+        </div>
-+      </div>
-     </section>
- 
--    <!-- LATEST (Chronological) -->
--    <section id="latest" class="space-y-10">
--    
-+    <!-- LATEST SECTIONS -->
-+    <main id="latest" class="space-y-14">
-+
-       <!-- Latest Research -->
--      <section id="research-latest">
--        <h2 class="text-2xl font-semibold mb-4" data-en="Latest research" data-es="Investigación reciente"></h2>
--    
--        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
--    
-+      <section id="research-latest" class="space-y-5">
-+        <div class="flex items-baseline justify-between">
-+          <h2 class="text-xl sm:text-2xl font-semibold" data-en="Latest research" data-es="Investigación reciente"></h2>
-+          <span class="text-xs uppercase tracking-[0.2em] text-slate-400">2025 → 2023</span>
-+        </div>
-+
-+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-           <!-- 2025 Preprint -->
--          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
--             href="https://doi.org/10.5194/egusphere-2025-3484" target="_blank" rel="noopener">
--            <img src="img/research_2025_preprint.jpg" class="w-full h-44 object-cover" alt="Preprint 2025 thumbnail">
--            <div class="p-4">
--              <div class="text-xs text-gray-500 mb-1">2025 · EGUsphere preprint</div>
--              <div class="font-semibold mb-1"
--                   data-en="What controls fire size in the South American Gran Chaco?"
--                   data-es="¿Qué controla el tamaño de los incendios en el Gran Chaco sudamericano?"></div>
--              <div class="text-sm text-gray-700"
--                   data-en="Atmospheric, landscape and anthropogenic drivers (in review)."
--                   data-es="Conductores atmosféricos, del paisaje y antropogénicos (en revisión)."></div>
--              <div class="text-sm text-blue-600 mt-3" data-en="Open DOI →" data-es="Abrir DOI →"></div>
-+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-lg hover:border-sky-500 transition" href="https://doi.org/10.5194/egusphere-2025-3484" target="_blank" rel="noopener">
-+            <img src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fdoi.org%2F10.5194%2Fegusphere-2025-3484" class="w-full h-48 object-cover" alt="EGUsphere preprint thumbnail generated via Microlink">
-+            <div class="p-4 space-y-2">
-+              <div class="text-xs text-slate-400">2025 · EGUsphere preprint</div>
-+              <div class="font-semibold text-lg text-white" data-en="Gran Chaco fire-size drivers" data-es="Factores del tamaño de incendios en el Gran Chaco"></div>
-+              <p class="text-sm text-slate-300" data-en="Atmospheric, landscape, and anthropogenic controls on fire size (in review)." data-es="Controles atmosféricos, del paisaje y antrópicos sobre el tamaño de los incendios (en revisión)."></p>
-+              <span class="text-sm text-sky-400" data-en="Open DOI →" data-es="Abrir DOI →"></span>
-             </div>
-           </a>
--    
--          <!-- 2024 Thesis -->
--          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
--             href="#" target="_blank" rel="noopener">
--            <img src="img/feature_esa_2025.jpg" class="w-full h-44 object-cover" alt="Thesis thumbnail">
--            <div class="p-4">
--              <div class="text-xs text-gray-500 mb-1">2024 · PhD thesis</div>
--              <div class="font-semibold mb-1"
--                   data-en="Fires, land use, and forest loss in the South American Chaco"
--                   data-es="Incendios, uso del suelo y pérdida de bosque en el Chaco sudamericano"></div>
--              <div class="text-sm text-gray-700"
--                   data-en="Université Paris-Saclay."
--                   data-es="Université Paris-Saclay."></div>
--              <div class="text-sm text-blue-600 mt-3" data-en="Add PDF link →" data-es="Agregar link PDF →"></div>
-+
-+          <!-- 2024 PhD Thesis -->
-+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-lg hover:border-sky-500 transition" href="#" aria-disabled="true">
-+            <img src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fwww.universite-paris-saclay.fr%2Fen" class="w-full h-48 object-cover" alt="PhD thesis thumbnail placeholder via Microlink">
-+            <div class="p-4 space-y-2">
-+              <div class="text-xs text-slate-400">2024 · PhD thesis</div>
-+              <div class="font-semibold text-lg text-white" data-en="Fires, land use, and forest loss in the South American Chaco" data-es="Incendios, uso del suelo y pérdida de bosque en el Chaco sudamericano"></div>
-+              <p class="text-sm text-slate-300" data-en="Université Paris-Saclay." data-es="Université Paris-Saclay."></p>
-+              <span class="text-sm text-amber-300" data-en="Link coming soon" data-es="Enlace próximamente"></span>
-             </div>
-           </a>
--    
-+
-           <!-- 2023 Fire Ecology -->
--          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
--             href="https://fireecology.springeropen.com/articles/10.1186/s42408-023-00212-4" target="_blank" rel="noopener">
--            <img src="img/research_2025_preprint.jpg" class="w-full h-44 object-cover" alt="Fire Ecology 2023 thumbnail">
--            <div class="p-4">
--              <div class="text-xs text-gray-500 mb-1">2023 · Fire Ecology</div>
--              <div class="font-semibold mb-1"
--                   data-en="Fires in the South American Chaco: response to climate depends on land cover"
--                   data-es="Incendios en el Chaco: la respuesta al clima depende de la cobertura del suelo"></div>
--              <div class="text-sm text-blue-600 mt-3" data-en="Open article →" data-es="Abrir artículo →"></div>
-+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-lg hover:border-sky-500 transition" href="https://fireecology.springeropen.com/articles/10.1186/s42408-023-00212-4" target="_blank" rel="noopener">
-+            <img src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Ffireecology.springeropen.com%2Farticles%2F10.1186%2Fs42408-023-00212-4" class="w-full h-48 object-cover" alt="Fire Ecology 2023 thumbnail via Microlink">
-+            <div class="p-4 space-y-2">
-+              <div class="text-xs text-slate-400">2023 · Fire Ecology</div>
-+              <div class="font-semibold text-lg text-white" data-en="Fire response to climate depends on land cover" data-es="La respuesta del fuego al clima depende de la cobertura del suelo"></div>
-+              <span class="text-sm text-sky-400" data-en="Open article →" data-es="Abrir artículo →"></span>
-             </div>
-           </a>
--    
-+
-           <!-- 2023 ESSD Harper -->
--          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
--             href="https://doi.org/10.5194/essd-15-1465-2023" target="_blank" rel="noopener">
--            <img src="img/research_2025_preprint.jpg" class="w-full h-44 object-cover" alt="ESSD 2023 thumbnail">
--            <div class="p-4">
--              <div class="text-xs text-gray-500 mb-1">2023 · Earth System Science Data</div>
--              <div class="font-semibold mb-1"
--                   data-en="29-year annual 300 m plant-functional-type maps for climate models"
--                   data-es="Mapas PFT anuales a 300 m durante 29 años para modelos climáticos"></div>
--              <div class="text-sm text-blue-600 mt-3" data-en="Open DOI →" data-es="Abrir DOI →"></div>
-+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-lg hover:border-sky-500 transition" href="https://doi.org/10.5194/essd-15-1465-2023" target="_blank" rel="noopener">
-+            <img src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fdoi.org%2F10.5194%2Fessd-15-1465-2023" class="w-full h-48 object-cover" alt="ESSD 2023 thumbnail via Microlink">
-+            <div class="p-4 space-y-2">
-+              <div class="text-xs text-slate-400">2023 · Earth System Science Data</div>
-+              <div class="font-semibold text-lg text-white" data-en="29-year annual 300 m PFT maps for climate models" data-es="29 años de mapas PFT anuales a 300 m para modelos climáticos"></div>
-+              <span class="text-sm text-sky-400" data-en="Open DOI →" data-es="Abrir DOI →"></span>
-             </div>
-           </a>
--    
-         </div>
-       </section>
--    
-+
-       <!-- Latest Features -->
--      <section id="features-latest">
--        <h2 class="text-2xl font-semibold mb-4" data-en="Latest features" data-es="Apariciones y notas recientes"></h2>
--    
--        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
--    
--          <!-- ESA 2025 -->
--          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
--             href="https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Satellite_records_expose_fire_driving_Gran_Chaco_transformation"
--             target="_blank" rel="noopener">
--            <img src="img/feature_esa_2025.jpg" class="w-full h-40 object-cover" alt="ESA 2025 thumbnail">
--            <div class="p-4">
--              <div class="text-xs text-gray-500 mb-1">2025 · ESA</div>
--              <div class="font-semibold mb-1"
--                   data-en="Satellite records expose fire driving Gran Chaco transformation"
--                   data-es="Registros satelitales y la transformación del Gran Chaco"></div>
--              <div class="text-sm text-blue-600 mt-3" data-en="Open feature →" data-es="Abrir nota →"></div>
--            </div>
--          </a>
--    
--          <!-- ESA 2024 -->
--          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
--             href="https://climate.esa.int/en/news-events/satellites-reveal-fire-drivers-in-global-deforestation-hotspot/"
--             target="_blank" rel="noopener">
--            <img src="img/feature_esa_2025.jpg" class="w-full h-40 object-cover" alt="ESA 2024 thumbnail">
--            <div class="p-4">
--              <div class="text-xs text-gray-500 mb-1">2024 · ESA Climate Office</div>
--              <div class="font-semibold mb-1"
--                   data-en="Satellites reveal fire drivers in a global deforestation hotspot"
--                   data-es="Satélites revelan motores del fuego en un foco global de deforestación"></div>
--              <div class="text-sm text-blue-600 mt-3" data-en="Open article →" data-es="Abrir nota →"></div>
-+      <section id="features-latest" class="space-y-5">
-+        <div class="flex items-baseline justify-between">
-+          <h2 class="text-xl sm:text-2xl font-semibold" data-en="Latest features" data-es="Apariciones recientes"></h2>
-+          <span class="text-xs uppercase tracking-[0.2em] text-slate-400">ESA · Media</span>
-+        </div>
-+
-+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-+          <!-- ESA 2025 Feature -->
-+          <div class="bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-lg">
-+            <a class="block" href="https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Satellite_records_expose_fire_driving_Gran_Chaco_transformation" target="_blank" rel="noopener">
-+              <img src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fwww.esa.int%2FApplications%2FObserving_the_Earth%2FSpace_for_our_climate%2FSatellite_records_expose_fire_driving_Gran_Chaco_transformation" class="w-full h-48 object-cover" alt="ESA Space for our Climate feature thumbnail via Microlink">
-+              <div class="p-4 space-y-2">
-+                <div class="text-xs text-slate-400">ESA 2025 · Space for our Climate</div>
-+                <div class="font-semibold text-white" data-en="Satellite records expose fire driving Gran Chaco transformation" data-es="Los registros satelitales revelan el papel del fuego en la transformación del Gran Chaco"></div>
-+                <span class="text-sm text-sky-400" data-en="Read feature →" data-es="Leer nota →"></span>
-+              </div>
-+            </a>
-+            <video controls class="w-full" preload="metadata" poster="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fwww.esa.int%2FApplications%2FObserving_the_Earth%2FSpace_for_our_climate%2FSatellite_records_expose_fire_driving_Gran_Chaco_transformation">
-+              <source src="https://dlmultimedia.esa.int/download/public/videos/2025/06/025/2506_025_AR_EN.mp4" type="video/mp4">
-+            </video>
-+          </div>
-+
-+          <!-- ESA Climate Office 2024 -->
-+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-lg hover:border-sky-500 transition" href="https://climate.esa.int/en/news-events/satellites-reveal-fire-drivers-in-global-deforestation-hotspot/" target="_blank" rel="noopener">
-+            <img src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fclimate.esa.int%2Fen%2Fnews-events%2Fsatellites-reveal-fire-drivers-in-global-deforestation-hotspot%2F" class="w-full h-48 object-cover" alt="ESA Climate Office 2024 thumbnail via Microlink">
-+            <div class="p-4 space-y-2">
-+              <div class="text-xs text-slate-400">ESA Climate Office 2024</div>
-+              <div class="font-semibold text-white" data-en="Satellites reveal fire drivers in global deforestation hotspot" data-es="Los satélites revelan motores del fuego en un foco mundial de deforestación"></div>
-+              <span class="text-sm text-sky-400" data-en="Read article →" data-es="Leer artículo →"></span>
-             </div>
-           </a>
--    
-+
-           <!-- TN Podcast 2023 -->
--          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
--             href="https://tn.com.ar/podcasts/2023/03/15/el-fuego-arrasa-los-bosques-de-america-latina/"
--             target="_blank" rel="noopener">
--            <img src="img/feature_esa_2025.jpg" class="w-full h-40 object-cover" alt="TN Podcast thumbnail">
--            <div class="p-4">
--              <div class="text-xs text-gray-500 mb-1">2023 · Podcast (TN)</div>
--              <div class="font-semibold mb-1">El fuego arrasa los bosques de América Latina</div>
--              <div class="text-sm text-blue-600 mt-3" data-en="Listen →" data-es="Escuchar →"></div>
-+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-lg hover:border-sky-500 transition md:col-span-2" href="https://tn.com.ar/podcasts/2023/03/15/el-fuego-arrasa-los-bosques-de-america-latina/" target="_blank" rel="noopener">
-+            <img src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Ftn.com.ar%2Fpodcasts%2F2023%2F03%2F15%2Fel-fuego-arrasa-los-bosques-de-america-latina%2F" class="w-full h-48 object-cover" alt="TN Podcast 2023 thumbnail via Microlink">
-+            <div class="p-4 space-y-2">
-+              <div class="text-xs text-slate-400">TN Podcast 2023</div>
-+              <div class="font-semibold text-white" data-en="El fuego arrasa los bosques de América Latina" data-es="El fuego arrasa los bosques de América Latina"></div>
-+              <span class="text-sm text-sky-400" data-en="Listen →" data-es="Escuchar →"></span>
-             </div>
-           </a>
--    
-         </div>
-       </section>
--    
--      <!-- Latest Conferences -->
--      <section id="conferences-latest">
--        <h2 class="text-2xl font-semibold mb-4" data-en="Latest conferences and talks" data-es="Conferencias y charlas recientes"></h2>
--    
--        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
--    
--          <!-- OSH YouTube -->
--          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
--             href="https://youtu.be/nXwnsoqII_4" target="_blank" rel="noopener">
--            <img src="img/conference_osh_2023.jpg" class="w-full h-44 object-cover" alt="OSH 2023 thumbnail">
--            <div class="p-4">
--              <div class="text-xs text-gray-500 mb-1">2023 · One Sustainable Health for All</div>
--              <div class="font-semibold mb-1"
--                   data-en="Panel session video"
--                   data-es="Video de la sesión/panel"></div>
--              <div class="text-sm text-blue-600 mt-3" data-en="Open on YouTube →" data-es="Abrir en YouTube →"></div>
--            </div>
--          </a>
--    
--          <!-- PhD Defense YouTube -->
--          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
--             href="https://youtu.be/qw78ySfkFCY" target="_blank" rel="noopener">
--            <img src="img/conference_osh_2023.jpg" class="w-full h-44 object-cover" alt="PhD defense thumbnail">
-+
-+      <!-- Latest Conferences / Talks -->
-+      <section id="conferences-latest" class="space-y-5">
-+        <div class="flex items-baseline justify-between">
-+          <h2 class="text-xl sm:text-2xl font-semibold" data-en="Latest conferences" data-es="Conferencias recientes"></h2>
-+          <span class="text-xs uppercase tracking-[0.2em] text-slate-400">2024 → 2023</span>
-+        </div>
-+
-+        <div class="space-y-6">
-+          <!-- 2024 PhD Defense -->
-+          <div class="bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-lg">
-             <div class="p-4">
--              <div class="text-xs text-gray-500 mb-1">2024 · PhD Defense</div>
--              <div class="font-semibold mb-1"
--                   data-en="Defense recording"
--                   data-es="Grabación de la defensa"></div>
--              <div class="text-sm text-blue-600 mt-3" data-en="Open on YouTube →" data-es="Abrir en YouTube →"></div>
-+              <div class="text-xs text-slate-400">2024 · PhD Defense</div>
-+              <div class="font-semibold text-white" data-en="PhD Defense — Gran Chaco fire and land-use dynamics" data-es="Defensa de doctorado — Dinámica de fuego y uso del suelo en el Gran Chaco"></div>
-             </div>
--          </a>
--    
--        </div>
--    
--        <!-- Embedded videos -->
--        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
--          <div class="bg-white rounded-lg shadow p-4">
--            <h3 class="font-semibold mb-3" data-en="Watch: OSH 2023" data-es="Ver: OSH 2023"></h3>
-             <div class="aspect-video w-full">
--              <iframe class="w-full h-full rounded"
--                src="https://www.youtube.com/embed/nXwnsoqII_4"
--                title="OSH 2023"
--                frameborder="0"
--                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
--                allowfullscreen></iframe>
-+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/qw78ySfkFCY" title="PhD Defense" allowfullscreen></iframe>
-             </div>
-           </div>
--    
--          <div class="bg-white rounded-lg shadow p-4">
--            <h3 class="font-semibold mb-3" data-en="Watch: PhD Defense" data-es="Ver: Defensa PhD"></h3>
-+
-+          <!-- 2023 OSH Talk -->
-+          <div class="bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-lg">
-+            <div class="p-4">
-+              <div class="text-xs text-slate-400">2023 · One Sustainable Health for All (OSH)</div>
-+              <div class="font-semibold text-white" data-en="Plenary panel — Better Ways to Better Futures" data-es="Panel plenaria — Better Ways to Better Futures"></div>
-+            </div>
-             <div class="aspect-video w-full">
--              <iframe class="w-full h-full rounded"
--                src="https://www.youtube.com/embed/qw78ySfkFCY"
--                title="PhD Defense"
--                frameborder="0"
--                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
--                allowfullscreen></iframe>
-+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/nXwnsoqII_4" title="OSH 2023" allowfullscreen></iframe>
-             </div>
-           </div>
-         </div>
--    
-       </section>
--    
--    </section>
--
--    
--    
--    <!-- RESEARCH -->
--    <section id="research">
--      <h2 class="text-2xl font-semibold mb-3" data-en="Research" data-es="Líneas de investigación"></h2>
--      <ul class="list-disc ml-6 space-y-1 text-sm">
--        <li data-en="Fire dynamics and morphology under different climate and land-cover regimes."
--            data-es="Dinámica y morfología del fuego bajo distintos regímenes de clima y cobertura del suelo."></li>
--        <li data-en="Deforestation, forest degradation and oil-palm expansion in tropical landscapes."
--            data-es="Deforestación, degradación de bosques y expansión de la palma aceitera en paisajes tropicales."></li>
--        <li data-en="Vegetation productivity (EVI, LAI) and land degradation in dry forests and savannas."
--            data-es="Productividad de la vegetación (EVI, LAI) y degradación de tierras en bosques secos y sabanas."></li>
--        <li data-en="Wind, topography and landscape configuration as controls of fire spread and fire size."
--            data-es="Viento, topografía y configuración del paisaje como controles de la propagación y tamaño de los incendios."></li>
--        <li data-en="AI-based, high-resolution land-cover mapping for climate and Earth system modelling (ESA HRLC)."
--            data-es="Mapeo de cobertura terrestre de alta resolución basado en IA para modelos de clima y del sistema terrestre (ESA HRLC)."></li>
--      </ul>
--    </section>
--
--    <!-- PUBLICATIONS & OUTPUT -->
--    <section id="publications">
--      <h2 class="text-2xl font-semibold mb-4" 
--          data-en="Publications & Scientific Output" 
--          data-es="Publicaciones y producción científica"></h2>
--
--      <!-- STATS -->
--      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-sm">
--        <div class="bg-white rounded-lg shadow p-4">
--          <h3 class="font-semibold mb-1" data-en="Google Scholar (Nov 2025)" data-es="Google Scholar (nov 2025)"></h3>
--          <p data-en="132 citations · h-index = 4 · i10-index = 2"
--             data-es="132 citas · h-index = 4 · i10-index = 2"></p>
--        </div>
--        <div class="bg-white rounded-lg shadow p-4">
--          <h3 class="font-semibold mb-1" data-en="ResearchGate (Nov 2025)" data-es="ResearchGate (nov 2025)"></h3>
--          <p data-en="124 citations · h-index = 3 · Research Interest Score = 132.8"
--             data-es="124 citas · h-index = 3 · Research Interest Score = 132.8"></p>
--        </div>
--      </div>
--
--      <!-- ARTICLES -->
--      <h3 class="font-semibold mt-4 mb-2 text-sm"
--          data-en="Peer-reviewed journal articles"
--          data-es="Artículos en revistas con revisión por pares"></h3>
--      <ul class="list-disc ml-6 space-y-2 text-sm">
--        <li>
--          San Martín, R., Ottlé, C., &amp; Sörensson, A. A. (2023). 
--          <em>Fires in the South American Chaco, from dry forests to wetlands: response to climate depends on land cover.</em>
--          <span class="italic">Fire Ecology</span>, 19, 57.
--          <a class="text-blue-600" href="https://fireecology.springeropen.com/articles/10.1186/s42408-023-00212-4" target="_blank" rel="noopener">Link</a>
--        </li>
--        <li>
--          Harper, K. L., Lamarche, C., Hartley, A., Peylin, P., Ottlé, C., Bastrikov, V., <strong>San Martín, R.</strong>, 
--          Bohnenstengel, S. I., Kirches, G., Boettcher, M., Shevchuk, R., Brockmann, C., &amp; Defourny, P. (2023).
--          <em>A 29-year time series of annual 300 m resolution plant-functional-type maps for climate models.</em>
--          <span class="italic">Earth System Science Data</span>, 15, 1465–1499.
--          <a class="text-blue-600" href="https://doi.org/10.5194/essd-15-1465-2023" target="_blank" rel="noopener">DOI</a>
--        </li>
--      </ul>
--
--      <!-- PREPRINT -->
--      <h3 class="font-semibold mt-6 mb-2 text-sm"
--          data-en="In review (available as preprint)"
--          data-es="En revisión (disponible como preprint)"></h3>
--      <ul class="list-disc ml-6 space-y-2 text-sm">
--        <li>
--          San Martín, R., Ottlé, C., Sörensson, A. A., Vaittinada Ayar, P., Mouillot, F., &amp; Malfante, M. (2025).
--          <em>What controls fire size in the South American Gran Chaco? Exploring atmospheric, landscape, and anthropogenic drivers.</em>
--          <span class="italic">EGUsphere</span> preprint.
--          <a class="text-blue-600" href="https://doi.org/10.5194/egusphere-2025-3484" target="_blank" rel="noopener">DOI</a>
--        </li>
--      </ul>
--
--      <!-- PHD THESIS -->
--      <h3 class="font-semibold mt-6 mb-2 text-sm" data-en="PhD thesis" data-es="Tesis doctoral"></h3>
--      <ul class="list-disc ml-6 space-y-2 text-sm">
--        <li>
--          San Martín, R. (2024). 
--          <em>Fires, land use, and forest loss in the South American Chaco: understanding the links between fires, climate, ecosystems, and human activity through remote sensing.</em>
--          Université Paris-Saclay.
--        </li>
--      </ul>
--
--      <!-- CONFERENCES -->
--      <h3 class="font-semibold mt-6 mb-2 text-sm"
--          data-en="Selected conference contributions and posters"
--          data-es="Contribuciones y pósteres seleccionados"></h3>
--      <h4 class="font-medium mb-1 text-sm"
--          data-en="International conferences"
--          data-es="Conferencias internacionales"></h4>
--      <ul class="list-disc ml-6 space-y-2 text-sm">
--        <li>
--          ESA Living Planet Symposium 2025 (LPS25), Vienna, Austria. Poster:
--          <em>Fires, Land Use, and Forest Loss in the South American Chaco: Links Between Fire Regimes, Climate, and Human Activity.</em>
--        </li>
--        <li>
--          EGU General Assembly 2023, Vienna, Austria. Poster/PICO:
--          <em>South American Chaco: fires, land-use and climate.</em>
--          <span data-en=" Awarded OSPP 2023." data-es=" Premio OSPP 2023."></span>
--        </li>
--        <li>
--          ESA Living Planet Symposium 2022 (LPS22), Bonn, Germany. Poster:
--          <em>HRLC/LMDZ – High Resolution Land Cover for climate modelling.</em>
--        </li>
--        <li>
--          CONGREMET 2022, Buenos Aires, Argentina. Poster:
--          <em>Characterizing the fire regime evolution and land use change in the dry and wet Chaco between 2001–2019.</em>
--        </li>
--      </ul>
--
--      <!-- INVITED TALKS -->
--      <h3 class="font-semibold mt-6 mb-2 text-sm"
--          data-en="Invited talks & panels"
--          data-es="Charlas invitadas y paneles"></h3>
--      <ul class="list-disc ml-6 space-y-2 text-sm">
--        <li>
--          One Sustainable Health for All 2023 Global Forum, Lyon, France. Plenary Session 4 panelist:
--          <em>“Better Ways to Better Futures: Next Generation One Sustainable Health Landscape.”</em>
--        </li>
--      </ul>
--
--      <!-- AWARDS -->
--      <h3 class="font-semibold mt-6 mb-2 text-sm"
--          data-en="Awards"
--          data-es="Premios"></h3>
--      <ul class="list-disc ml-6 space-y-2 text-sm">
--        <li>
--          EGU Outstanding Student and PhD candidate Presentation (OSPP) Award, 2023.
--          <a class="text-blue-600" href="https://www.egu.eu/awards-medals/ospp-award/2023/rodrigo-san-martin/" target="_blank" rel="noopener">Link</a>
--        </li>
--      </ul>
--
--      <!-- MEDIA -->
--      <h3 class="font-semibold mt-6 mb-2 text-sm"
--          data-en="Media and outreach"
--          data-es="Medios y divulgación"></h3>
- 
--      <h4 class="font-medium mb-1 text-sm">ESA</h4>
--      <ul class="list-disc ml-6 space-y-2 text-sm">
--        <li>
--          <span data-en="ESA Climate Office news (2024): Satellites reveal fire drivers in global deforestation hotspot."
--                data-es="ESA Climate Office (2024): Los satélites revelan motores del fuego en un foco mundial de deforestación."></span>
--          <a class="text-blue-600" href="https://climate.esa.int/en/news-events/satellites-reveal-fire-drivers-in-global-deforestation-hotspot/" target="_blank" rel="noopener">Link</a>
--        </li>
--        <li>
--          <span data-en="ESA “Space for our Climate” feature (2025): Satellite records expose fire driving Gran Chaco transformation."
--                data-es="ESA “Space for our Climate” (2025): Los registros satelitales exponen el papel del fuego en la transformación del Gran Chaco."></span>
--          <a class="text-blue-600" href="https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Satellite_records_expose_fire_driving_Gran_Chaco_transformation" target="_blank" rel="noopener">Link</a>
--        </li>
--      </ul>
--
--      <h4 class="font-medium mb-1 text-sm" data-en="Podcast" data-es="Podcast"></h4>
--      <ul class="list-disc ml-6 space-y-2 text-sm">
--        <li>
--          TN Podcast (2023): <em>El fuego arrasa los bosques de América Latina.</em>
--          <a class="text-blue-600" href="https://tn.com.ar/podcasts/2023/03/15/el-fuego-arrasa-los-bosques-de-america-latina/" target="_blank" rel="noopener">Link</a>
--        </li>
--      </ul>
--    </section>
--
--    <!-- CONTACT -->
--    <section id="contact">
--      <h2 class="text-2xl font-semibold mb-3" data-en="Contact" data-es="Contacto"></h2>
--      
--      <p class="text-sm">
--        <strong data-en="Primary email:" data-es="Email principal:"></strong>
--        <a href="mailto:rodrigo.climatechange@gmail.com" class="text-blue-600">
--          rodrigo.climatechange@gmail.com
--        </a>
--      </p>
--    
--      <p class="text-sm">
--        <strong data-en="Institutional email:" data-es="Email institucional:"></strong>
--        <a href="mailto:rodrigo.sanmartin@lsce.ipsl.fr" class="text-blue-600">
--          rodrigo.sanmartin@lsce.ipsl.fr
--        </a>
--      </p>
--    
--      <p class="text-sm mt-2">
--        GitHub (code): <a href="https://github.com/Roderick-SM" class="text-blue-600">Roderick-SM</a>
--      </p>
--    
--      <p class="text-sm">
--        <span data-en="Academic profiles (Google Scholar, ORCID, etc.) will be linked here."
--              data-es="Perfiles académicos (Google Scholar, ORCID, etc.) se enlazarán aquí."></span>
--      </p>
--    </section>
--
--  </main>
-+      <!-- CONTACT -->
-+      <section id="contact" class="bg-slate-800/70 border border-slate-700 rounded-xl p-6 shadow-lg space-y-3">
-+        <h2 class="text-xl sm:text-2xl font-semibold" data-en="Contact" data-es="Contacto"></h2>
-+        <p class="text-sm text-slate-300">
-+          <strong data-en="Primary email:" data-es="Email principal:"></strong>
-+          <a href="mailto:rodrigo.climatechange@gmail.com" class="text-sky-300 hover:text-sky-200">rodrigo.climatechange@gmail.com</a>
-+        </p>
-+        <p class="text-sm text-slate-300">
-+          <strong data-en="Institutional email:" data-es="Email institucional:"></strong>
-+          <a href="mailto:rodrigo.sanmartin@lsce.ipsl.fr" class="text-sky-300 hover:text-sky-200">rodrigo.sanmartin@lsce.ipsl.fr</a>
-+        </p>
-+        <p class="text-sm text-slate-300">
-+          <span data-en="Chronological academic updates in EN / ES with automatic link previews." data-es="Actualizaciones académicas cronológicas en EN / ES con vistas previas automáticas de links."></span>
-+        </p>
-+      </section>
-+    </main>
-+  </div>
- 
-   <!-- LANGUAGE SCRIPT -->
-   <script>
-     const enBtn = document.getElementById('lang-en');
-     const esBtn = document.getElementById('lang-es');
-     const translatables = document.querySelectorAll('[data-en]');
- 
-     function setLang(lang) {
-       translatables.forEach(el => {
-         const text = el.getAttribute('data-' + lang);
-         if (text !== null) el.textContent = text;
-       });
-       if (lang === 'en') {
--        enBtn.classList.add('text-blue-600');
--        esBtn.classList.remove('text-blue-600');
-+        enBtn.classList.add('text-sky-400');
-+        esBtn.classList.remove('text-sky-400');
-       } else {
--        esBtn.classList.add('text-blue-600');
--        enBtn.classList.remove('text-blue-600');
-+        esBtn.classList.add('text-sky-400');
-+        enBtn.classList.remove('text-sky-400');
-       }
-       localStorage.setItem('lang', lang);
-     }
- 
-     enBtn.addEventListener('click', () => setLang('en'));
-     esBtn.addEventListener('click', () => setLang('es'));
- 
-     setLang(localStorage.getItem('lang') || 'en');
-   </script>
--
- </body>
- </html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Rodrigo San Martín | Research</title>
+  <meta name="description" content="Chronological academic portfolio: latest research, features, and talks. EN/ES switch, automatic link previews, embedded videos.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rodrigo San Martín | Research">
+  <meta property="og:description" content="Chronological academic portfolio: latest research, features, and talks.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://r-sanmartin.github.io/">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Minimal page polish -->
+  <style>
+    html { scroll-behavior: smooth; }
+    .shadow-soft { box-shadow: 0 18px 60px rgba(0,0,0,0.35); }
+  </style>
+
+  <!-- Google tag (gtag.js) + Consent (CNIL-friendly baseline) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E4C6DR28CY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    // Default to denied until user chooses (good baseline for France).
+    // If you prefer "measure immediately", set analytics_storage to 'granted' here and remove the banner section below.
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+
+    gtag('js', new Date());
+    gtag('config', 'G-E4C6DR28CY', { anonymize_ip: true });
+  </script>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-slate-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+
+    <!-- HEADER -->
+    <header class="flex items-center justify-between gap-4">
+      <div class="flex items-center gap-4 min-w-0">
+        <div class="h-16 w-16 rounded-full border border-slate-700 overflow-hidden bg-slate-800 shrink-0">
+          <img
+            src="img/portrait.jpg"
+            alt="Portrait"
+            class="h-full w-full object-cover"
+            loading="lazy"
+            onerror="this.remove();"
+          >
+        </div>
+        <div class="min-w-0">
+          <p class="text-xs uppercase tracking-[0.2em] text-sky-400">CNRS / LSCE</p>
+          <h1 class="text-2xl sm:text-3xl font-semibold truncate">Rodrigo San Martín</h1>
+          <p class="text-sm text-slate-300" data-en="Fire–climate–land interactions" data-es="Interacciones fuego–clima–cobertura del suelo"></p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <nav class="hidden md:flex gap-4 text-sm text-slate-300">
+          <a href="#latest" class="hover:text-white transition" data-en="Latest" data-es="Reciente"></a>
+          <a href="#research-latest" class="hover:text-white transition" data-en="Research" data-es="Investigación"></a>
+          <a href="#features-latest" class="hover:text-white transition" data-en="Features" data-es="Apariciones"></a>
+          <a href="#conferences-latest" class="hover:text-white transition" data-en="Conferences" data-es="Conferencias"></a>
+          <a href="#contact" class="hover:text-white transition" data-en="Contact" data-es="Contacto"></a>
+        </nav>
+
+        <div class="flex rounded-full border border-slate-700 bg-slate-800/60 overflow-hidden text-sm">
+          <button id="lang-en" class="px-3 py-1 font-medium" aria-label="Switch language to English">EN</button>
+          <button id="lang-es" class="px-3 py-1 font-medium" aria-label="Cambiar idioma a Español">ES</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-slate-800/60 border border-slate-700 rounded-2xl p-6 sm:p-8 shadow-soft backdrop-blur">
+      <div class="grid md:grid-cols-[2fr,1fr] gap-6 items-center">
+        <div class="space-y-3">
+          <p class="text-sm text-slate-300" data-en="Postdoctoral Researcher at CNRS / LSCE (France)." data-es="Investigador postdoctoral en el CNRS / LSCE (Francia)."></p>
+          <p class="text-lg text-slate-100"
+             data-en="Studying how fire, climate, and land use transform ecosystems across the South American Gran Chaco, Southeast Asia, and Southern Africa."
+             data-es="Estudio cómo el fuego, el clima y el uso del suelo transforman ecosistemas en el Gran Chaco sudamericano, el Sudeste Asiático y África Austral."></p>
+          <p class="text-sm text-slate-300" data-en="Chronological feed: newest research, features, and talks first." data-es="Cronología: lo más reciente en investigación, apariciones y charlas primero."></p>
+
+          <div class="pt-2 flex flex-wrap gap-2">
+            <a href="#research-latest" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700 bg-slate-900/40 hover:bg-slate-900/70 transition text-sm">
+              <span class="text-sky-300" data-en="Latest research" data-es="Investigación reciente"></span>
+              <span class="text-slate-400">→</span>
+            </a>
+            <a href="#features-latest" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700 bg-slate-900/40 hover:bg-slate-900/70 transition text-sm">
+              <span class="text-sky-300" data-en="Latest features" data-es="Apariciones recientes"></span>
+              <span class="text-slate-400">→</span>
+            </a>
+            <a href="#conferences-latest" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700 bg-slate-900/40 hover:bg-slate-900/70 transition text-sm">
+              <span class="text-sky-300" data-en="Latest talks" data-es="Charlas recientes"></span>
+              <span class="text-slate-400">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="justify-self-end hidden sm:block">
+          <div class="h-32 w-32 rounded-2xl border border-slate-700 bg-gradient-to-br from-sky-500/40 via-slate-600/20 to-slate-800 shadow-inner"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main id="latest" class="space-y-14">
+
+      <!-- LATEST RESEARCH -->
+      <section id="research-latest" class="space-y-5">
+        <div class="flex items-baseline justify-between">
+          <h2 class="text-xl sm:text-2xl font-semibold" data-en="Latest research" data-es="Investigación reciente"></h2>
+          <span class="text-xs uppercase tracking-[0.2em] text-slate-400">2025 → 2023</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- 2025 Preprint -->
+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-soft hover:border-sky-500 transition"
+             href="https://doi.org/10.5194/egusphere-2025-3484" target="_blank" rel="noopener">
+            <img
+              src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fdoi.org%2F10.5194%2Fegusphere-2025-3484"
+              class="w-full h-48 object-cover"
+              alt="EGUsphere preprint 2025 preview"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22480%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230b1220%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%2394a3b8%22 font-size=%2236%22 font-family=%22Arial%22 text-anchor=%22middle%22>Preview unavailable</text></svg>';"
+            >
+            <div class="p-4 space-y-2">
+              <div class="text-xs text-slate-400">2025 · EGUsphere preprint</div>
+              <div class="font-semibold text-lg text-white"
+                   data-en="Gran Chaco fire-size drivers"
+                   data-es="Factores del tamaño de incendios en el Gran Chaco"></div>
+              <p class="text-sm text-slate-300"
+                 data-en="Atmospheric, landscape, and anthropogenic controls on fire size (in review)."
+                 data-es="Controles atmosféricos, del paisaje y antrópicos sobre el tamaño de incendios (en revisión)."></p>
+              <span class="text-sm text-sky-400" data-en="Open DOI →" data-es="Abrir DOI →"></span>
+            </div>
+          </a>
+
+          <!-- 2024 PhD Thesis -->
+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-soft hover:border-sky-500 transition"
+             href="https://theses.hal.science/tel-04885407" target="_blank" rel="noopener">
+            <img
+              src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Ftheses.hal.science%2Ftel-04885407"
+              class="w-full h-48 object-cover"
+              alt="PhD thesis preview"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22480%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230b1220%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%2394a3b8%22 font-size=%2236%22 font-family=%22Arial%22 text-anchor=%22middle%22>Preview unavailable</text></svg>';"
+            >
+            <div class="p-4 space-y-2">
+              <div class="text-xs text-slate-400">2024 · PhD thesis</div>
+              <div class="font-semibold text-lg text-white"
+                   data-en="Fires, land use, and forest loss in the South American Chaco"
+                   data-es="Incendios, uso del suelo y pérdida de bosque en el Chaco sudamericano"></div>
+              <p class="text-sm text-slate-300" data-en="Université Paris-Saclay." data-es="Université Paris-Saclay."></p>
+              <div class="flex flex-wrap gap-x-3 gap-y-2 pt-1">
+                <span class="text-sky-400 hover:underline text-sm" data-en="Archive page →" data-es="Archivo HAL →"></span>
+                <span class="text-sky-400 hover:underline text-sm" data-en="PDF available on HAL →" data-es="PDF disponible en HAL →"></span>
+              </div>
+            </div>
+          </a>
+
+          <!-- 2023 Fire Ecology -->
+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-soft hover:border-sky-500 transition"
+             href="https://fireecology.springeropen.com/articles/10.1186/s42408-023-00212-4" target="_blank" rel="noopener">
+            <img
+              src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Ffireecology.springeropen.com%2Farticles%2F10.1186%2Fs42408-023-00212-4"
+              class="w-full h-48 object-cover"
+              alt="Fire Ecology 2023 preview"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22480%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230b1220%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%2394a3b8%22 font-size=%2236%22 font-family=%22Arial%22 text-anchor=%22middle%22>Preview unavailable</text></svg>';"
+            >
+            <div class="p-4 space-y-2">
+              <div class="text-xs text-slate-400">2023 · Fire Ecology</div>
+              <div class="font-semibold text-lg text-white"
+                   data-en="Fire response to climate depends on land cover"
+                   data-es="La respuesta del fuego al clima depende de la cobertura del suelo"></div>
+              <span class="text-sm text-sky-400" data-en="Open article →" data-es="Abrir artículo →"></span>
+            </div>
+          </a>
+
+          <!-- 2023 ESSD Harper -->
+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-soft hover:border-sky-500 transition"
+             href="https://doi.org/10.5194/essd-15-1465-2023" target="_blank" rel="noopener">
+            <img
+              src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fdoi.org%2F10.5194%2Fessd-15-1465-2023"
+              class="w-full h-48 object-cover"
+              alt="ESSD 2023 preview"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22480%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230b1220%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%2394a3b8%22 font-size=%2236%22 font-family=%22Arial%22 text-anchor=%22middle%22>Preview unavailable</text></svg>';"
+            >
+            <div class="p-4 space-y-2">
+              <div class="text-xs text-slate-400">2023 · Earth System Science Data</div>
+              <div class="font-semibold text-lg text-white"
+                   data-en="29-year annual 300 m PFT maps for climate models"
+                   data-es="29 años de mapas PFT anuales a 300 m para modelos climáticos"></div>
+              <span class="text-sm text-sky-400" data-en="Open DOI →" data-es="Abrir DOI →"></span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- LATEST FEATURES -->
+      <section id="features-latest" class="space-y-5">
+        <div class="flex items-baseline justify-between">
+          <h2 class="text-xl sm:text-2xl font-semibold" data-en="Latest features" data-es="Apariciones recientes"></h2>
+          <span class="text-xs uppercase tracking-[0.2em] text-slate-400">ESA · Media</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- ESA 2025 Feature + Video -->
+          <div class="bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-soft">
+            <a class="block"
+               href="https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Satellite_records_expose_fire_driving_Gran_Chaco_transformation"
+               target="_blank" rel="noopener">
+              <img
+                src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fwww.esa.int%2FApplications%2FObserving_the_Earth%2FSpace_for_our_climate%2FSatellite_records_expose_fire_driving_Gran_Chaco_transformation"
+                class="w-full h-48 object-cover"
+                alt="ESA 2025 feature preview"
+                loading="lazy"
+                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22480%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230b1220%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%2394a3b8%22 font-size=%2236%22 font-family=%22Arial%22 text-anchor=%22middle%22>Preview unavailable</text></svg>';"
+              >
+              <div class="p-4 space-y-2">
+                <div class="text-xs text-slate-400">ESA 2025 · Space for our Climate</div>
+                <div class="font-semibold text-white"
+                     data-en="Satellite records expose fire driving Gran Chaco transformation"
+                     data-es="Los registros satelitales revelan el papel del fuego en la transformación del Gran Chaco"></div>
+                <span class="text-sm text-sky-400" data-en="Read feature →" data-es="Leer nota →"></span>
+              </div>
+            </a>
+
+            <video controls class="w-full" preload="metadata">
+              <source src="https://dlmultimedia.esa.int/download/public/videos/2025/06/025/2506_025_AR_EN.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <!-- ESA Climate Office 2024 -->
+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-soft hover:border-sky-500 transition"
+             href="https://climate.esa.int/en/news-events/satellites-reveal-fire-drivers-in-global-deforestation-hotspot/"
+             target="_blank" rel="noopener">
+            <img
+              src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fclimate.esa.int%2Fen%2Fnews-events%2Fsatellites-reveal-fire-drivers-in-global-deforestation-hotspot%2F"
+              class="w-full h-48 object-cover"
+              alt="ESA Climate Office 2024 preview"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22480%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230b1220%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%2394a3b8%22 font-size=%2236%22 font-family=%22Arial%22 text-anchor=%22middle%22>Preview unavailable</text></svg>';"
+            >
+            <div class="p-4 space-y-2">
+              <div class="text-xs text-slate-400">ESA Climate Office 2024</div>
+              <div class="font-semibold text-white"
+                   data-en="Satellites reveal fire drivers in global deforestation hotspot"
+                   data-es="Los satélites revelan motores del fuego en un foco mundial de deforestación"></div>
+              <span class="text-sm text-sky-400" data-en="Read article →" data-es="Leer artículo →"></span>
+            </div>
+          </a>
+
+          <!-- TN Podcast 2023 -->
+          <a class="group bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-soft hover:border-sky-500 transition md:col-span-2"
+             href="https://tn.com.ar/podcasts/2023/03/15/el-fuego-arrasa-los-bosques-de-america-latina/"
+             target="_blank" rel="noopener">
+            <img
+              src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Ftn.com.ar%2Fpodcasts%2F2023%2F03%2F15%2Fel-fuego-arrasa-los-bosques-de-america-latina%2F"
+              class="w-full h-48 object-cover"
+              alt="TN Podcast 2023 preview"
+              loading="lazy"
+              onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%221200%22 height=%22480%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%230b1220%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%2394a3b8%22 font-size=%2236%22 font-family=%22Arial%22 text-anchor=%22middle%22>Preview unavailable</text></svg>';"
+            >
+            <div class="p-4 space-y-2">
+              <div class="text-xs text-slate-400">TN Podcast 2023</div>
+              <div class="font-semibold text-white"
+                   data-en="El fuego arrasa los bosques de América Latina"
+                   data-es="El fuego arrasa los bosques de América Latina"></div>
+              <span class="text-sm text-sky-400" data-en="Listen →" data-es="Escuchar →"></span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- LATEST CONFERENCES / TALKS -->
+      <section id="conferences-latest" class="space-y-5">
+        <div class="flex items-baseline justify-between">
+          <h2 class="text-xl sm:text-2xl font-semibold" data-en="Latest conferences" data-es="Conferencias recientes"></h2>
+          <span class="text-xs uppercase tracking-[0.2em] text-slate-400">2024 → 2023</span>
+        </div>
+
+        <div class="space-y-6">
+
+          <!-- 2024 PhD Defense -->
+          <div class="bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-soft">
+            <div class="p-4 space-y-1">
+              <div class="text-xs text-slate-400">2024 · PhD Defense</div>
+              <div class="font-semibold text-white"
+                   data-en="PhD Defense: Gran Chaco fire and land-use dynamics"
+                   data-es="Defensa de doctorado: Dinámica de fuego y uso del suelo en el Gran Chaco"></div>
+            </div>
+            <div class="aspect-video w-full">
+              <iframe class="w-full h-full"
+                      src="https://www.youtube.com/embed/qw78ySfkFCY"
+                      title="PhD Defense"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!-- 2023 OSH Talk -->
+          <div class="bg-slate-800/70 border border-slate-700 rounded-xl overflow-hidden shadow-soft">
+            <div class="p-4 space-y-1">
+              <div class="text-xs text-slate-400">2023 · One Sustainable Health for All (OSH)</div>
+              <div class="font-semibold text-white"
+                   data-en="Plenary panel: Better Ways to Better Futures"
+                   data-es="Panel plenaria: Better Ways to Better Futures"></div>
+            </div>
+            <div class="aspect-video w-full">
+              <iframe class="w-full h-full"
+                      src="https://www.youtube.com/embed/nXwnsoqII_4"
+                      title="OSH 2023"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="bg-slate-800/70 border border-slate-700 rounded-xl p-6 shadow-soft space-y-3">
+        <h2 class="text-xl sm:text-2xl font-semibold" data-en="Contact" data-es="Contacto"></h2>
+
+        <p class="text-sm text-slate-300">
+          <strong class="text-slate-200" data-en="Primary email:" data-es="Email principal:"></strong>
+          <a href="mailto:rodrigo.climatechange@gmail.com" class="text-sky-300 hover:text-sky-200">rodrigo.climatechange@gmail.com</a>
+        </p>
+
+        <p class="text-sm text-slate-300">
+          <strong class="text-slate-200" data-en="Institutional email:" data-es="Email institucional:"></strong>
+          <a href="mailto:rodrigo.sanmartin@lsce.ipsl.fr" class="text-sky-300 hover:text-sky-200">rodrigo.sanmartin@lsce.ipsl.fr</a>
+        </p>
+
+        <p class="text-sm text-slate-300">
+          <span data-en="Chronological academic updates in EN/ES with automatic link previews and embedded videos."
+                data-es="Actualizaciones académicas cronológicas en EN/ES con vistas previas automáticas de links y videos embebidos."></span>
+        </p>
+
+        <div class="pt-2">
+          <button id="privacy-open" class="text-sm text-slate-300 hover:text-white underline underline-offset-4"
+                  data-en="Privacy and analytics settings"
+                  data-es="Privacidad y ajustes de analítica"></button>
+        </div>
+      </section>
+
+      <footer class="text-xs text-slate-500 pb-4">
+        <span data-en="Built with GitHub Pages, Tailwind (CDN), and simple JavaScript."
+              data-es="Hecho con GitHub Pages, Tailwind (CDN) y JavaScript simple."></span>
+      </footer>
+    </main>
+  </div>
+
+  <!-- CONSENT BANNER -->
+  <div id="consent-banner" class="fixed bottom-4 left-4 right-4 z-50 hidden">
+    <div class="max-w-6xl mx-auto bg-slate-900/95 border border-slate-700 rounded-2xl p-4 shadow-soft backdrop-blur">
+      <div class="flex flex-col md:flex-row md:items-center gap-3 md:gap-6">
+        <div class="text-sm text-slate-200">
+          <div class="font-semibold" data-en="Analytics (optional)" data-es="Analítica (opcional)"></div>
+          <div class="text-slate-300"
+               data-en="This site can use anonymous analytics to understand traffic. You can accept or decline."
+               data-es="Este sitio puede usar analítica anónima para entender el tráfico. Podés aceptar o rechazar."></div>
+        </div>
+        <div class="flex gap-2 md:ml-auto">
+          <button id="consent-decline"
+                  class="px-3 py-2 rounded-xl border border-slate-700 bg-slate-800/60 hover:bg-slate-800 transition text-sm">
+            <span data-en="Decline" data-es="Rechazar"></span>
+          </button>
+          <button id="consent-accept"
+                  class="px-3 py-2 rounded-xl border border-sky-500 bg-sky-500/20 hover:bg-sky-500/30 transition text-sm text-sky-200">
+            <span data-en="Accept" data-es="Aceptar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVACY MODAL -->
+  <div id="privacy-modal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative max-w-xl mx-auto mt-24 bg-slate-900 border border-slate-700 rounded-2xl p-5 shadow-soft">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <div class="text-lg font-semibold" data-en="Privacy and analytics" data-es="Privacidad y analítica"></div>
+          <p class="text-sm text-slate-300 mt-1"
+             data-en="You can change your analytics preference at any time."
+             data-es="Podés cambiar tu preferencia de analítica en cualquier momento."></p>
+        </div>
+        <button id="privacy-close" class="text-slate-300 hover:text-white" aria-label="Close">✕</button>
+      </div>
+
+      <div class="mt-4 flex gap-2">
+        <button id="privacy-accept"
+                class="px-3 py-2 rounded-xl border border-sky-500 bg-sky-500/20 hover:bg-sky-500/30 transition text-sm text-sky-200">
+          <span data-en="Accept analytics" data-es="Aceptar analítica"></span>
+        </button>
+        <button id="privacy-decline"
+                class="px-3 py-2 rounded-xl border border-slate-700 bg-slate-800/60 hover:bg-slate-800 transition text-sm">
+          <span data-en="Decline analytics" data-es="Rechazar analítica"></span>
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-500 mt-3"
+         data-en="Analytics uses Google Analytics 4. No ads personalization is enabled."
+         data-es="La analítica usa Google Analytics 4. No se habilita personalización publicitaria."></p>
+    </div>
+  </div>
+
+  <!-- LANGUAGE + CONSENT SCRIPT -->
+  <script>
+    const enBtn = document.getElementById('lang-en');
+    const esBtn = document.getElementById('lang-es');
+    const translatables = document.querySelectorAll('[data-en]');
+
+    function setLang(lang) {
+      translatables.forEach(el => {
+        const text = el.getAttribute('data-' + lang);
+        if (text !== null) el.textContent = text;
+      });
+
+      // Button UI
+      if (lang === 'en') {
+        enBtn.className = "px-3 py-1 font-medium text-sky-200 bg-sky-500/20";
+        esBtn.className = "px-3 py-1 font-medium text-slate-300 hover:text-white";
+        document.documentElement.lang = "en";
+        document.title = "Rodrigo San Martín | Research";
+      } else {
+        esBtn.className = "px-3 py-1 font-medium text-sky-200 bg-sky-500/20";
+        enBtn.className = "px-3 py-1 font-medium text-slate-300 hover:text-white";
+        document.documentElement.lang = "es";
+        document.title = "Rodrigo San Martín | Investigación";
+      }
+
+      localStorage.setItem('lang', lang);
+    }
+
+    enBtn.addEventListener('click', () => setLang('en'));
+    esBtn.addEventListener('click', () => setLang('es'));
+    setLang(localStorage.getItem('lang') || 'en');
+
+    // Consent handling
+    const banner = document.getElementById('consent-banner');
+    const consentKey = 'ga_consent_v1';
+
+    function applyConsent(value) {
+      const granted = value === 'granted';
+
+      // Update Google consent state
+      gtag('consent', 'update', {
+        'analytics_storage': granted ? 'granted' : 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied'
+      });
+
+      // Persist choice
+      localStorage.setItem(consentKey, value);
+    }
+
+    function initConsent() {
+      const saved = localStorage.getItem(consentKey);
+      if (!saved) {
+        banner.classList.remove('hidden');
+        return;
+      }
+      applyConsent(saved);
+    }
+
+    document.getElementById('consent-accept').addEventListener('click', () => {
+      applyConsent('granted');
+      banner.classList.add('hidden');
+    });
+
+    document.getElementById('consent-decline').addEventListener('click', () => {
+      applyConsent('denied');
+      banner.classList.add('hidden');
+    });
+
+    initConsent();
+
+    // Privacy modal
+    const privacyOpen = document.getElementById('privacy-open');
+    const privacyModal = document.getElementById('privacy-modal');
+    const privacyClose = document.getElementById('privacy-close');
+    const privacyAccept = document.getElementById('privacy-accept');
+    const privacyDecline = document.getElementById('privacy-decline');
+
+    function openPrivacy() { privacyModal.classList.remove('hidden'); }
+    function closePrivacy() { privacyModal.classList.add('hidden'); }
+
+    privacyOpen.addEventListener('click', openPrivacy);
+    privacyClose.addEventListener('click', closePrivacy);
+    privacyModal.addEventListener('click', (e) => {
+      if (e.target === privacyModal.firstElementChild) closePrivacy();
+    });
+
+    privacyAccept.addEventListener('click', () => {
+      applyConsent('granted');
+      closePrivacy();
+    });
+
+    privacyDecline.addEventListener('click', () => {
+      applyConsent('denied');
+      closePrivacy();
+    });
+  </script>
+</body>
+</html>
