@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Rodrigo SAN MARTÍN | Academic Portfolio</title>
-  <meta name="description" content="Chronological academic portfolio: features, research, featured figures, publications, and talks. EN/ES plus light/dark mode.">
+  <meta name="description" content="Academic portfolio: latest research, features, featured figures, talks, publications. EN/ES plus light/dark mode.">
 
   <meta property="og:title" content="Rodrigo SAN MARTÍN | Academic Portfolio">
   <meta property="og:description" content="Features, research, featured figures, publications, and talks.">
@@ -14,6 +14,7 @@
 
   <!-- Tailwind config must be before CDN -->
   <script>
+    // Tailwind CDN reads global "tailwind.config"
     tailwind = window.tailwind || {};
     tailwind.config = { darkMode: 'class' };
   </script>
@@ -47,6 +48,7 @@
   <!-- TOP BAR -->
   <div class="sticky top-0 z-40 border-b border-slate-200/70 dark:border-slate-800 bg-slate-50/90 dark:bg-slate-950/70 backdrop-blur">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-4">
+
       <div class="min-w-0">
         <div class="text-sm font-semibold truncate">Rodrigo <span class="uppercase tracking-wide">SAN MARTÍN</span></div>
         <div class="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-slate-400"
@@ -55,11 +57,11 @@
       </div>
 
       <nav class="hidden lg:flex items-center gap-4 text-sm text-slate-600 dark:text-slate-300 ml-auto">
-        <a href="#features-latest" class="hover:text-slate-900 dark:hover:text-white transition" data-en="Features" data-es="Apariciones"></a>
         <a href="#research-latest" class="hover:text-slate-900 dark:hover:text-white transition" data-en="Latest research" data-es="Investigación reciente"></a>
+        <a href="#features-latest" class="hover:text-slate-900 dark:hover:text-white transition" data-en="Latest features" data-es="Apariciones"></a>
         <a href="#featured" class="hover:text-slate-900 dark:hover:text-white transition" data-en="Featured research" data-es="Investigación destacada"></a>
-        <a href="#publications" class="hover:text-slate-900 dark:hover:text-white transition" data-en="Publications" data-es="Publicaciones"></a>
         <a href="#talks" class="hover:text-slate-900 dark:hover:text-white transition" data-en="Talks" data-es="Charlas"></a>
+        <a href="#publications" class="hover:text-slate-900 dark:hover:text-white transition" data-en="Publications" data-es="Publicaciones"></a>
         <a href="#contact" class="hover:text-slate-900 dark:hover:text-white transition" data-en="Contact" data-es="Contacto"></a>
       </nav>
 
@@ -82,19 +84,19 @@
 
   <!-- PAGE -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="grid grid-cols-1 lg:grid-cols-[340px,1fr] gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-[380px,1fr] gap-8">
 
       <!-- LEFT SIDEBAR -->
       <aside class="lg:sticky lg:top-20 h-fit space-y-4">
         <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 backdrop-blur p-5 shadow-soft">
           <div class="flex gap-4">
-            <div class="w-36 h-52 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shrink-0">
+            <div class="w-40 h-56 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 shrink-0">
               <img src="img/portrait.jpg" alt="Portrait" class="w-full h-full object-cover" loading="lazy">
             </div>
 
             <div class="min-w-0">
               <div class="text-xs uppercase tracking-[0.2em] text-sky-700 dark:text-sky-400">CNRS / LSCE</div>
-              <h1 class="text-xl sm:text-2xl font-semibold leading-tight">
+              <h1 class="text-2xl sm:text-3xl font-semibold leading-tight">
                 Rodrigo <span class="uppercase tracking-wide">SAN MARTÍN</span>
               </h1>
 
@@ -178,7 +180,7 @@
              data-en="Studying how fire, climate, and land use transform ecosystems across the Gran Chaco and beyond."
              data-es="Estudio cómo el fuego, el clima y el uso del suelo transforman ecosistemas en el Gran Chaco y otras regiones."></p>
         </section>
-        
+
         <!-- LATEST RESEARCH -->
         <section id="research-latest" class="space-y-5">
           <div class="flex items-baseline justify-between">
@@ -255,11 +257,27 @@
           </div>
         </section>
 
+        <!-- LATEST FEATURES -->
+        <section id="features-latest" class="space-y-5">
+          <div class="flex items-baseline justify-between">
+            <h2 class="text-xl sm:text-2xl font-semibold" data-en="Latest features" data-es="Apariciones recientes"></h2>
+            <span class="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">2025 → 2024</span>
+          </div>
 
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- ESA 2025 + video -->
+            <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 backdrop-blur overflow-hidden shadow-soft">
+              <a href="https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Satellite_records_expose_fire_driving_Gran_Chaco_transformation"
+                 target="_blank" rel="noopener"
+                 class="block hover:border-sky-400 transition">
+                <img
+                  src="img/ESA_feat_2025.png"
+                  class="w-full h-36 object-cover object-top"
                   alt="ESA 2025 feature preview"
                   loading="lazy">
                 <div class="p-4 space-y-1">
-                  <div class="text-sm text-slate-600 dark:text-slate-300">ESA 2025 · Space for our Climate</div>
+                  <div class="text-base font-semibold text-slate-700 dark:text-slate-200">ESA 2025 · Space for our Climate</div>
                   <div class="font-semibold text-slate-900 dark:text-white"
                        data-en="Satellite records expose fire driving Gran Chaco transformation"
                        data-es="Los registros satelitales revelan el papel del fuego en la transformación del Gran Chaco"></div>
@@ -275,28 +293,29 @@
                href="https://climate.esa.int/en/news-events/satellites-reveal-fire-drivers-in-global-deforestation-hotspot/"
                target="_blank" rel="noopener">
               <img
-                src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Fclimate.esa.int%2Fen%2Fnews-events%2Fsatellites-reveal-fire-drivers-in-global-deforestation-hotspot%2F"
-                class="w-full h-32 object-cover"
+                src="img/ESA_feat_2024.png"
+                class="w-full h-36 object-cover object-top"
                 alt="ESA Climate Office 2024 preview"
                 loading="lazy">
               <div class="p-4 space-y-1">
-                <div class="text-sm text-slate-600 dark:text-slate-300">ESA Climate Office 2024</div>
+                <div class="text-base font-semibold text-slate-700 dark:text-slate-200">ESA Climate Office 2024</div>
                 <div class="font-semibold text-slate-900 dark:text-white"
                      data-en="Satellites reveal fire drivers in global deforestation hotspot"
                      data-es="Los satélites revelan motores del fuego en un foco mundial de deforestación"></div>
               </div>
-            
-            <!-- TN Podcast 2023 -->
+            </a>
+
+            <!-- TN Podcast (screenshot 2024) -->
             <a class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 backdrop-blur overflow-hidden shadow-soft hover:border-sky-400 transition"
                href="https://tn.com.ar/podcasts/2023/03/15/el-fuego-arrasa-los-bosques-de-america-latina/"
                target="_blank" rel="noopener">
               <img
-                src="https://api.microlink.io/?screenshot=true&meta=false&embed=screenshot.url&url=https%3A%2F%2Ftn.com.ar%2Fpodcasts%2F2023%2F03%2F15%2Fel-fuego-arrasa-los-bosques-de-america-latina%2F"
-                class="w-full h-32 object-cover"
-                alt="TN Podcast 2023 preview"
+                src="img/TN_feat_2024.png"
+                class="w-full h-36 object-cover object-top"
+                alt="TN Podcast preview"
                 loading="lazy">
               <div class="p-4 space-y-1">
-                <div class="text-sm text-slate-600 dark:text-slate-300">TN Podcast 2023</div>
+                <div class="text-base font-semibold text-slate-700 dark:text-slate-200">TN Podcast</div>
                 <div class="font-semibold text-slate-900 dark:text-white"
                      data-en="El fuego arrasa los bosques de América Latina"
                      data-es="El fuego arrasa los bosques de América Latina"></div>
@@ -306,8 +325,7 @@
           </div>
         </section>
 
-        
-        <!-- FEATURED RESEARCH (moved after Latest research as requested) -->
+        <!-- FEATURED RESEARCH -->
         <section id="featured" class="space-y-5">
           <div class="flex items-baseline justify-between">
             <h2 class="text-xl sm:text-2xl font-semibold" data-en="Featured research" data-es="Investigación destacada"></h2>
@@ -377,7 +395,7 @@
           </div>
         </section>
 
-        <!-- PUBLICATIONS (your full list) -->
+        <!-- PUBLICATIONS -->
         <section id="publications" class="space-y-5">
           <div class="flex items-baseline justify-between">
             <h2 class="text-xl sm:text-2xl font-semibold" data-en="Publications and scientific output" data-es="Publicaciones y producción científica"></h2>
@@ -474,35 +492,25 @@
                   ESA Climate Office news (2024): Satellites reveal fire drivers in global deforestation hotspot.
                   <a class="text-sky-700 dark:text-sky-300 hover:underline"
                      href="https://climate.esa.int/en/news-events/satellites-reveal-fire-drivers-in-global-deforestation-hotspot/"
-                     target="_blank" rel="noopener">
-                    Link
-                  </a>
+                     target="_blank" rel="noopener">Link</a>
                 </li>
                 <li>
                   ESA Space for our Climate feature (2025): Satellite records expose fire driving Gran Chaco transformation.
                   <a class="text-sky-700 dark:text-sky-300 hover:underline"
                      href="https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Satellite_records_expose_fire_driving_Gran_Chaco_transformation"
-                     target="_blank" rel="noopener">
-                    Link
-                  </a>
+                     target="_blank" rel="noopener">Link</a>
                 </li>
-              </ul>
-
-              <div class="mt-4 text-base font-semibold text-slate-700 dark:text-slate-200" data-en="Podcast" data-es="Podcast"></div>
-              <ul class="mt-2 space-y-2 text-base text-slate-700 dark:text-slate-200">
                 <li>
                   TN Podcast interview (2023): El fuego arrasa los bosques de América Latina.
                   <a class="text-sky-700 dark:text-sky-300 hover:underline"
                      href="https://tn.com.ar/podcasts/2023/03/15/el-fuego-arrasa-los-bosques-de-america-latina/"
-                     target="_blank" rel="noopener">
-                    Link
-                  </a>
+                     target="_blank" rel="noopener">Link</a>
                 </li>
               </ul>
             </div>
 
           </div>
-        </section>  
+        </section>
 
         <!-- CONTACT -->
         <section id="contact" class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 backdrop-blur p-6 shadow-soft space-y-3">
@@ -517,7 +525,6 @@
             <strong class="text-slate-900 dark:text-slate-100" data-en="Institutional email:" data-es="Email institucional:"></strong>
             <a href="mailto:rodrigo.sanmartin@lsce.ipsl.fr" class="text-sky-700 dark:text-sky-300 hover:underline">rodrigo.sanmartin@lsce.ipsl.fr</a>
           </p>
-
         </section>
 
       </main>
