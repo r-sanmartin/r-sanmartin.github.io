@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -225,23 +225,7 @@
                      data-en="Satellites reveal fire drivers in global deforestation hotspot"
                      data-es="Los satélites revelan motores del fuego en un foco mundial de deforestación"></div>
               </div>
-            </a>
-
-            <!-- ESA Feature 2023 (placeholder: necesito el link real) -->
-            <a class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 backdrop-blur overflow-hidden shadow-soft hover:border-sky-400 transition"
-               href="#"
-               title="Send me the ESA 2023 link to replace this placeholder">
-              <div class="p-4 space-y-2">
-                <div class="text-sm text-slate-600 dark:text-slate-300">ESA feature 2023</div>
-                <div class="font-semibold text-slate-900 dark:text-white"
-                     data-en="Placeholder: add ESA 2023 feature link"
-                     data-es="Placeholder: agregar link de la nota ESA 2023"></div>
-                <div class="text-xs text-slate-500 dark:text-slate-500"
-                     data-en="Paste the URL and I will wire it with Microlink preview."
-                     data-es="Pegá la URL y la conecto con preview Microlink."></div>
-              </div>
-            </a>
-
+            
             <!-- TN Podcast 2023 -->
             <a class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/40 backdrop-blur overflow-hidden shadow-soft hover:border-sky-400 transition"
                href="https://tn.com.ar/podcasts/2023/03/15/el-fuego-arrasa-los-bosques-de-america-latina/"
@@ -549,9 +533,6 @@
             <a href="mailto:rodrigo.sanmartin@lsce.ipsl.fr" class="text-sky-700 dark:text-sky-300 hover:underline">rodrigo.sanmartin@lsce.ipsl.fr</a>
           </p>
 
-          <p class="text-xs text-slate-500 dark:text-slate-500"
-             data-en="Site hosted on GitHub Pages."
-             data-es="Sitio alojado en GitHub Pages."></p>
         </section>
 
       </main>
@@ -656,7 +637,7 @@
     function getPreferredTheme() {
       const saved = localStorage.getItem('theme');
       if (saved === 'light' || saved === 'dark') return saved;
-      return 'dark';
+      return 'light';
     }
 
     function applyTheme(theme) {
