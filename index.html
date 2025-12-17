@@ -10,19 +10,20 @@
 <body class="bg-gray-50 text-gray-800 font-sans">
 
   <!-- NAVBAR -->
-  <nav class="bg-white shadow mb-8">
-    <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div>
-        <h1 class="text-xl font-semibold">Rodrigo San Martín</h1>
-        <p class="text-xs text-gray-500" data-en="Postdoctoral Researcher · CNRS / LSCE"
-           data-es="Investigador postdoctoral · CNRS / LSCE"></p>
-      </div>
-      <div class="space-x-1">
-        <button id="lang-en" class="px-3 py-1 text-sm font-medium text-blue-600 border rounded-full">EN</button>
-        <button id="lang-es" class="px-3 py-1 text-sm text-gray-500 border rounded-full">ES</button>
-      </div>
+  <div class="flex items-center gap-4">
+    <div class="hidden md:flex gap-3 text-sm">
+      <a href="#latest" class="text-gray-600 hover:text-gray-900" data-en="Latest" data-es="Reciente"></a>
+      <a href="#research-latest" class="text-gray-600 hover:text-gray-900" data-en="Research" data-es="Research"></a>
+      <a href="#features-latest" class="text-gray-600 hover:text-gray-900" data-en="Features" data-es="Features"></a>
+      <a href="#conferences-latest" class="text-gray-600 hover:text-gray-900" data-en="Conferences" data-es="Conferencias"></a>
+      <a href="#publications" class="text-gray-600 hover:text-gray-900" data-en="Publications" data-es="Publicaciones"></a>
+      <a href="#contact" class="text-gray-600 hover:text-gray-900" data-en="Contact" data-es="Contacto"></a>
     </div>
-  </nav>
+    <div class="space-x-1">
+      <button id="lang-en" class="px-3 py-1 text-sm font-medium text-blue-600 border rounded-full">EN</button>
+      <button id="lang-es" class="px-3 py-1 text-sm text-gray-500 border rounded-full">ES</button>
+    </div>
+  </div>
 
   <!-- MAIN CONTENT -->
   <main class="max-w-5xl mx-auto px-4 pb-12 space-y-12">
@@ -40,6 +41,192 @@
       </p>
     </section>
 
+    <!-- LATEST (Chronological) -->
+    <section id="latest" class="space-y-10">
+    
+      <!-- Latest Research -->
+      <section id="research-latest">
+        <h2 class="text-2xl font-semibold mb-4" data-en="Latest research" data-es="Investigación reciente"></h2>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    
+          <!-- 2025 Preprint -->
+          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
+             href="https://doi.org/10.5194/egusphere-2025-3484" target="_blank" rel="noopener">
+            <img src="img/research_2025_preprint.jpg" class="w-full h-44 object-cover" alt="Preprint 2025 thumbnail">
+            <div class="p-4">
+              <div class="text-xs text-gray-500 mb-1">2025 · EGUsphere preprint</div>
+              <div class="font-semibold mb-1"
+                   data-en="What controls fire size in the South American Gran Chaco?"
+                   data-es="¿Qué controla el tamaño de los incendios en el Gran Chaco sudamericano?"></div>
+              <div class="text-sm text-gray-700"
+                   data-en="Atmospheric, landscape and anthropogenic drivers (in review)."
+                   data-es="Conductores atmosféricos, del paisaje y antropogénicos (en revisión)."></div>
+              <div class="text-sm text-blue-600 mt-3" data-en="Open DOI →" data-es="Abrir DOI →"></div>
+            </div>
+          </a>
+    
+          <!-- 2024 Thesis -->
+          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
+             href="#" target="_blank" rel="noopener">
+            <img src="img/feature_esa_2025.jpg" class="w-full h-44 object-cover" alt="Thesis thumbnail">
+            <div class="p-4">
+              <div class="text-xs text-gray-500 mb-1">2024 · PhD thesis</div>
+              <div class="font-semibold mb-1"
+                   data-en="Fires, land use, and forest loss in the South American Chaco"
+                   data-es="Incendios, uso del suelo y pérdida de bosque en el Chaco sudamericano"></div>
+              <div class="text-sm text-gray-700"
+                   data-en="Université Paris-Saclay."
+                   data-es="Université Paris-Saclay."></div>
+              <div class="text-sm text-blue-600 mt-3" data-en="Add PDF link →" data-es="Agregar link PDF →"></div>
+            </div>
+          </a>
+    
+          <!-- 2023 Fire Ecology -->
+          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
+             href="https://fireecology.springeropen.com/articles/10.1186/s42408-023-00212-4" target="_blank" rel="noopener">
+            <img src="img/research_2025_preprint.jpg" class="w-full h-44 object-cover" alt="Fire Ecology 2023 thumbnail">
+            <div class="p-4">
+              <div class="text-xs text-gray-500 mb-1">2023 · Fire Ecology</div>
+              <div class="font-semibold mb-1"
+                   data-en="Fires in the South American Chaco: response to climate depends on land cover"
+                   data-es="Incendios en el Chaco: la respuesta al clima depende de la cobertura del suelo"></div>
+              <div class="text-sm text-blue-600 mt-3" data-en="Open article →" data-es="Abrir artículo →"></div>
+            </div>
+          </a>
+    
+          <!-- 2023 ESSD Harper -->
+          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
+             href="https://doi.org/10.5194/essd-15-1465-2023" target="_blank" rel="noopener">
+            <img src="img/research_2025_preprint.jpg" class="w-full h-44 object-cover" alt="ESSD 2023 thumbnail">
+            <div class="p-4">
+              <div class="text-xs text-gray-500 mb-1">2023 · Earth System Science Data</div>
+              <div class="font-semibold mb-1"
+                   data-en="29-year annual 300 m plant-functional-type maps for climate models"
+                   data-es="Mapas PFT anuales a 300 m durante 29 años para modelos climáticos"></div>
+              <div class="text-sm text-blue-600 mt-3" data-en="Open DOI →" data-es="Abrir DOI →"></div>
+            </div>
+          </a>
+    
+        </div>
+      </section>
+    
+      <!-- Latest Features -->
+      <section id="features-latest">
+        <h2 class="text-2xl font-semibold mb-4" data-en="Latest features" data-es="Apariciones y notas recientes"></h2>
+    
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    
+          <!-- ESA 2025 -->
+          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
+             href="https://www.esa.int/Applications/Observing_the_Earth/Space_for_our_climate/Satellite_records_expose_fire_driving_Gran_Chaco_transformation"
+             target="_blank" rel="noopener">
+            <img src="img/feature_esa_2025.jpg" class="w-full h-40 object-cover" alt="ESA 2025 thumbnail">
+            <div class="p-4">
+              <div class="text-xs text-gray-500 mb-1">2025 · ESA</div>
+              <div class="font-semibold mb-1"
+                   data-en="Satellite records expose fire driving Gran Chaco transformation"
+                   data-es="Registros satelitales y la transformación del Gran Chaco"></div>
+              <div class="text-sm text-blue-600 mt-3" data-en="Open feature →" data-es="Abrir nota →"></div>
+            </div>
+          </a>
+    
+          <!-- ESA 2024 -->
+          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
+             href="https://climate.esa.int/en/news-events/satellites-reveal-fire-drivers-in-global-deforestation-hotspot/"
+             target="_blank" rel="noopener">
+            <img src="img/feature_esa_2025.jpg" class="w-full h-40 object-cover" alt="ESA 2024 thumbnail">
+            <div class="p-4">
+              <div class="text-xs text-gray-500 mb-1">2024 · ESA Climate Office</div>
+              <div class="font-semibold mb-1"
+                   data-en="Satellites reveal fire drivers in a global deforestation hotspot"
+                   data-es="Satélites revelan motores del fuego en un foco global de deforestación"></div>
+              <div class="text-sm text-blue-600 mt-3" data-en="Open article →" data-es="Abrir nota →"></div>
+            </div>
+          </a>
+    
+          <!-- TN Podcast 2023 -->
+          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
+             href="https://tn.com.ar/podcasts/2023/03/15/el-fuego-arrasa-los-bosques-de-america-latina/"
+             target="_blank" rel="noopener">
+            <img src="img/feature_esa_2025.jpg" class="w-full h-40 object-cover" alt="TN Podcast thumbnail">
+            <div class="p-4">
+              <div class="text-xs text-gray-500 mb-1">2023 · Podcast (TN)</div>
+              <div class="font-semibold mb-1">El fuego arrasa los bosques de América Latina</div>
+              <div class="text-sm text-blue-600 mt-3" data-en="Listen →" data-es="Escuchar →"></div>
+            </div>
+          </a>
+    
+        </div>
+      </section>
+    
+      <!-- Latest Conferences -->
+      <section id="conferences-latest">
+        <h2 class="text-2xl font-semibold mb-4" data-en="Latest conferences and talks" data-es="Conferencias y charlas recientes"></h2>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    
+          <!-- OSH YouTube -->
+          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
+             href="https://youtu.be/nXwnsoqII_4" target="_blank" rel="noopener">
+            <img src="img/conference_osh_2023.jpg" class="w-full h-44 object-cover" alt="OSH 2023 thumbnail">
+            <div class="p-4">
+              <div class="text-xs text-gray-500 mb-1">2023 · One Sustainable Health for All</div>
+              <div class="font-semibold mb-1"
+                   data-en="Panel session video"
+                   data-es="Video de la sesión/panel"></div>
+              <div class="text-sm text-blue-600 mt-3" data-en="Open on YouTube →" data-es="Abrir en YouTube →"></div>
+            </div>
+          </a>
+    
+          <!-- PhD Defense YouTube -->
+          <a class="block bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden"
+             href="https://youtu.be/qw78ySfkFCY" target="_blank" rel="noopener">
+            <img src="img/conference_osh_2023.jpg" class="w-full h-44 object-cover" alt="PhD defense thumbnail">
+            <div class="p-4">
+              <div class="text-xs text-gray-500 mb-1">2024 · PhD Defense</div>
+              <div class="font-semibold mb-1"
+                   data-en="Defense recording"
+                   data-es="Grabación de la defensa"></div>
+              <div class="text-sm text-blue-600 mt-3" data-en="Open on YouTube →" data-es="Abrir en YouTube →"></div>
+            </div>
+          </a>
+    
+        </div>
+    
+        <!-- Embedded videos -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg shadow p-4">
+            <h3 class="font-semibold mb-3" data-en="Watch: OSH 2023" data-es="Ver: OSH 2023"></h3>
+            <div class="aspect-video w-full">
+              <iframe class="w-full h-full rounded"
+                src="https://www.youtube.com/embed/nXwnsoqII_4"
+                title="OSH 2023"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+    
+          <div class="bg-white rounded-lg shadow p-4">
+            <h3 class="font-semibold mb-3" data-en="Watch: PhD Defense" data-es="Ver: Defensa PhD"></h3>
+            <div class="aspect-video w-full">
+              <iframe class="w-full h-full rounded"
+                src="https://www.youtube.com/embed/qw78ySfkFCY"
+                title="PhD Defense"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+    
+      </section>
+    
+    </section>
+
+    
+    
     <!-- RESEARCH -->
     <section id="research">
       <h2 class="text-2xl font-semibold mb-3" data-en="Research" data-es="Líneas de investigación"></h2>
