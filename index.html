@@ -269,7 +269,7 @@
             ></a>
           </nav>
 
-          <div class="flex items-center justify-end gap-3 lg:hidden">
+          <div class="hidden">
             <div class="app-card rounded-2xl px-3 py-2 flex items-center gap-2">
               <button
                 id="lang-en"
@@ -299,7 +299,7 @@
       </div>
 
       <!-- Right rail controls (desktop) -->
-      <div class="hidden lg:flex fixed right-5 top-1/2 -translate-y-1/2 z-40 flex-col gap-3">
+      <div class="flex fixed right-3 top-24 z-40 flex-col gap-3 lg:right-5 lg:top-1/2 lg:-translate-y-1/2">
         <div class="app-card rounded-2xl p-2 flex flex-col gap-2 items-center">
           <button id="lang-en-rail" class="focus-ring text-sm font-semibold px-2 py-1 rounded-xl" type="button">EN</button>
           <button id="lang-es-rail" class="focus-ring text-sm font-semibold px-2 py-1 rounded-xl" type="button">ES</button>
@@ -1291,23 +1291,24 @@
         }
       });
 
-      // Back to top button
-      const backToTopBtn = document.getElementById("back-to-top");
-      
-      function updateBackToTopVisibility() {
+      // Back to top button (init after DOM is ready)
+      window.addEventListener("DOMContentLoaded", () => {
+        const backToTopBtn = document.getElementById("back-to-top");
         if (!backToTopBtn) return;
-        const show = window.scrollY > 600;
-        backToTopBtn.classList.toggle("hidden", !show);
-      }
       
-      if (backToTopBtn) {
+        function updateBackToTopVisibility() {
+          const show = window.scrollY > 600;
+          backToTopBtn.classList.toggle("hidden", !show);
+        }
+      
         backToTopBtn.addEventListener("click", () => {
           window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
         });
-      }
       
-      window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
-      updateBackToTopVisibility();
+        window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+        updateBackToTopVisibility();
+      });
+
       // Active section highlight in top nav (scroll spy)
       
       (function setupScrollSpy() {
