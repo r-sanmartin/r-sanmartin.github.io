@@ -1295,6 +1295,7 @@
       window.addEventListener("DOMContentLoaded", () => {
         const backToTopBtn = document.getElementById("back-to-top");
         if (!backToTopBtn) return;
+        if (typeof applyLanguage === "function") applyLanguage();
       
         function updateBackToTopVisibility() {
           const show = window.scrollY > 600;
