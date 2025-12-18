@@ -153,6 +153,18 @@
       }
     </style>
 
+    <!-- Back to top button -->
+    <button
+      id="back-to-top"
+      type="button"
+      class="hidden fixed bottom-5 right-5 z-40 focus-ring app-card rounded-2xl px-4 py-2 text-sm font-semibold"
+      data-en="Back to top"
+      data-es="Volver arriba"
+      data-fr="Retour en haut"
+      aria-label="Back to top"
+    ></button>
+
+    
     <script>
       (function () {
         const GA_ID = "G-E4C6DR28CY";
@@ -1148,6 +1160,25 @@
           if (!privacyModal.classList.contains("hidden")) closeModal(privacyModal);
         }
       });
+
+      // Back to top button
+      const backToTopBtn = document.getElementById("back-to-top");
+      
+      function updateBackToTopVisibility() {
+        if (!backToTopBtn) return;
+        const show = window.scrollY > 600;
+        backToTopBtn.classList.toggle("hidden", !show);
+      }
+      
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        });
+      }
+      
+      window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+      updateBackToTopVisibility();
+
 
       applyLanguage();
     </script>
