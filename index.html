@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Rodrigo SAN MARTÍN | Academic Portfolio</title>
+    <title>Dr. Rodrigo SAN MARTÍN | Academic Portfolio</title>
     <meta
       name="description"
-      content="Academic portfolio of Rodrigo San Martín (CNRS/LSCE). Fire, climate, and land interactions. Publications, media, and projects."
+      content="Academic portfolio of Dr. Rodrigo San Martín (CNRS/LSCE). Fire, climate, and land interactions. Publications, media, and projects."
     />
     <link rel="canonical" href="https://r-sanmartin.github.io/" />
 
     <!-- Open Graph / WhatsApp -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://r-sanmartin.github.io/" />
-    <meta property="og:title" content="Rodrigo San Martín | CNRS / LSCE" />
+    <meta property="og:title" content="Dr. Rodrigo San Martín | CNRS / LSCE" />
     <meta property="og:description" content="Fire, climate, and land interactions. Academic portfolio, publications, and outreach." />
     <meta property="og:image" content="https://r-sanmartin.github.io/img/social-card.jpg" />
     <meta property="og:image:width" content="1200" />
@@ -21,7 +21,7 @@
     
     <!-- Optional: Twitter (también ayuda a muchos previews) -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Rodrigo San Martín | CNRS / LSCE" />
+    <meta name="twitter:title" content="Dr. Rodrigo San Martín | CNRS / LSCE" />
     <meta name="twitter:description" content="Fire, climate, and land interactions. Academic portfolio, publications, and outreach." />
     <meta name="twitter:image" content="https://r-sanmartin.github.io/img/social-card.jpg" />
 
@@ -172,20 +172,16 @@
       section {
         scroll-margin-top: 6.5rem;
       }
+
+
+      @media (max-width: 640px) {
+        section {
+          scroll-margin-top: 9rem;
+        }
+      }
+
       
     </style>
-
-    <!-- Back to top button -->
-    <button
-      id="back-to-top"
-      type="button"
-      class="hidden fixed bottom-5 right-5 z-40 focus-ring app-card rounded-2xl px-4 py-2 text-sm font-semibold"
-      data-en="Back to top"
-      data-es="Volver arriba"
-      data-fr="Retour en haut"
-      aria-label="Back to top"
-    ></button>
-
     
     <script>
       (function () {
@@ -225,10 +221,10 @@
   </head>
 
   <body class="antialiased">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-      <div class="flex flex-col gap-3 mb-6 sticky top-0 z-40 pt-3">
-        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-          <nav class="app-card rounded-2xl px-3 py-2 flex flex-wrap items-center gap-2">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-6">
+      <div class="sticky top-0 z-40 bg-[var(--bg)] pt-4 pb-3 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-end gap-3">
+          <nav class="app-card rounded-2xl px-3 py-2 flex flex-wrap items-center gap-2 lg:ml-auto">
             <a
               class="focus-ring text-sm font-semibold px-3 py-1 rounded-xl"
               href="#bio" data-navlink
@@ -273,7 +269,7 @@
             ></a>
           </nav>
 
-          <div class="flex items-center justify-end gap-3">
+          <div class="flex items-center justify-end gap-3 lg:hidden">
             <div class="app-card rounded-2xl px-3 py-2 flex items-center gap-2">
               <button
                 id="lang-en"
@@ -302,6 +298,25 @@
         </div>
       </div>
 
+      <!-- Right rail controls (desktop) -->
+      <div class="hidden lg:flex fixed right-5 top-1/2 -translate-y-1/2 z-40 flex-col gap-3">
+        <div class="app-card rounded-2xl p-2 flex flex-col gap-2 items-center">
+          <button id="lang-en-rail" class="focus-ring text-sm font-semibold px-2 py-1 rounded-xl" type="button">EN</button>
+          <button id="lang-es-rail" class="focus-ring text-sm font-semibold px-2 py-1 rounded-xl" type="button">ES</button>
+          <button id="lang-fr-rail" class="focus-ring text-sm font-semibold px-2 py-1 rounded-xl" type="button">FR</button>
+        </div>
+      
+        <button
+          id="theme-toggle-rail"
+          type="button"
+          class="focus-ring app-card rounded-2xl px-3 py-2 text-sm font-semibold"
+          aria-label="Toggle theme"
+        >
+          <span id="theme-label-rail">Dark</span>
+        </button>
+      </div>
+
+      
       <div class="grid grid-cols-1 lg:grid-cols-[24rem_1fr] gap-6">
         <aside class="lg:sticky lg:top-6 lg:self-start">
           <div class="app-card-strong rounded-3xl p-5 sidebar-scroll">
@@ -312,7 +327,7 @@
             <div class="mt-4">
               <div class="text-xs font-semibold tracking-widest app-muted">CNRS / LSCE</div>
               <div class="mt-1 text-3xl font-extrabold leading-tight">
-                Rodrigo<br />
+                Dr.&nbsp;Rodrigo<br />
                 <span class="uppercase">SAN&nbsp;MARTÍN</span>
               </div>
 
@@ -452,7 +467,8 @@
               data-fr="Bio"
             ></h2>
           </div>
-        
+
+          <div class="mt-4 app-card rounded-3xl p-6 prose-like">  
           <p
             data-en="I study land use and land use change processes, with a particular focus on deforestation and its links with fire activity. During my PhD and subsequent research, I have focused on dry and humid forest ecosystems of the South American Gran Chaco, combining remote sensing, climate data, and fire observations to understand the interactions between climate variability, human land use, and fire regimes."
             data-es="Estudio los procesos de uso del suelo y cambio de uso del suelo, con especial atención a la deforestación y sus vínculos con la actividad de incendios. Durante mi doctorado y trabajos posteriores, me enfoqué en los ecosistemas de bosques secos y húmedos del Gran Chaco sudamericano, combinando datos satelitales, información climática y observaciones de fuego para comprender las interacciones entre la variabilidad climática, el uso humano del territorio y los regímenes de incendios."
@@ -472,6 +488,8 @@
             data-es="Más recientemente, comencé a extender este enfoque a otras regiones, como el sudeste asiático y el sur de África, con el objetivo de analizar las interacciones entre uso del suelo, incendios y clima en distintos contextos socioambientales."
             data-fr="Plus récemment, j’ai commencé à étendre ces travaux à d’autres régions, notamment l’Asie du Sud-Est et l’Afrique australe, afin d’explorer les interactions entre usages des terres, feux et climat dans des contextes socio-environnementaux contrastés."
           ></p>
+          </div>
+            
         </section>
 
           
@@ -752,113 +770,124 @@
 
             <!-- One per row, full figure visible, chronological (2025 first, then 2023) -->
             <div class="mt-4 space-y-8">
+            
               <!-- 2025 Fig 4 -->
-              <figure>
-                <button
-                  type="button"
-                  class="block w-full text-left"
-                  data-zoom-src="img/preprint2025_fig4.png"
-                  data-zoom-alt="San Martín et al. (2025) preprint Fig. 4"
-                  data-caption-en="San Martín et al. (2025) preprint, Fig. 4 (Gran Chaco). Land cover and fire patterns in the Gran Chaco. ESA-CCI MRLC land cover in 2001 and 2022 is shown in (a–b), forest transitions in (c), and FRYv2.0 fire events (2001–2022) by fire size in (d)."
-                  data-caption-es="Preprint San Martín et al. (2025), Fig. 4 (Gran Chaco). Cobertura del suelo y patrones de fuego en el Gran Chaco. La cobertura del suelo ESA-CCI MRLC en 2001 y 2022 se muestra en (a–b), las transiciones forestales en (c) y los eventos de fuego FRYv2.0 (2001–2022) por tamaño en (d)."
-                  data-caption-fr="Prépublication San Martín et al. (2025), Fig. 4 (Gran Chaco). Occupation du sol et régimes de feu dans le Gran Chaco. L’occupation du sol ESA-CCI MRLC en 2001 et 2022 est présentée en (a–b), les transitions forestières en (c) et les événements de feu FRYv2.0 (2001–2022) par taille en (d)."
-                >
-                  <img
-                    src="img/preprint2025_fig4.png"
-                    alt="San Martín et al. (2025) preprint Fig. 4"
-                    class="w-full rounded-2xl border"
-                    style="border-color: var(--border);"
-                  />
-                </button>
-                <figcaption class="mt-3 text-sm app-muted leading-relaxed">
-                  <span
-                    data-en="San Martín et al. (2025) preprint, Fig. 4 (Gran Chaco). Land cover and fire patterns in the Gran Chaco. ESA-CCI MRLC land cover in 2001 and 2022 is shown in (a–b), forest transitions in (c), and FRYv2.0 fire events (2001–2022) by fire size in (d)."
-                    data-es="Preprint San Martín et al. (2025), Fig. 4 (Gran Chaco). Cobertura del suelo y patrones de fuego en el Gran Chaco. La cobertura del suelo ESA-CCI MRLC en 2001 y 2022 se muestra en (a–b), las transiciones forestales en (c) y los eventos de fuego FRYv2.0 (2001–2022) por tamaño en (d)."
-                    data-fr="Prépublication San Martín et al. (2025), Fig. 4 (Gran Chaco). Occupation du sol et régimes de feu dans le Gran Chaco. L’occupation du sol ESA-CCI MRLC en 2001 et 2022 est présentée en (a–b), les transitions forestières en (c) et les événements de feu FRYv2.0 (2001–2022) par taille en (d)."
-                  ></span>
-                </figcaption>
-              </figure>
+              <div class="app-card rounded-3xl p-4">
+                <figure>
+                  <button
+                    type="button"
+                    class="block w-full text-left"
+                    data-zoom-src="img/preprint2025_fig4.png"
+                    data-zoom-alt="San Martín et al. (2025) preprint Fig. 4"
+                    data-caption-en="San Martín et al. (2025) preprint, Fig. 4 (Gran Chaco). Land cover and fire patterns in the Gran Chaco. ESA-CCI MRLC land cover in 2001 and 2022 is shown in (a–b), forest transitions in (c), and FRYv2.0 fire events (2001–2022) by fire size in (d)."
+                    data-caption-es="Preprint San Martín et al. (2025), Fig. 4 (Gran Chaco). Cobertura del suelo y patrones de fuego en el Gran Chaco. La cobertura del suelo ESA-CCI MRLC en 2001 y 2022 se muestra en (a–b), las transiciones forestales en (c) y los eventos de fuego FRYv2.0 (2001–2022) por tamaño en (d)."
+                    data-caption-fr="Prépublication San Martín et al. (2025), Fig. 4 (Gran Chaco). Occupation du sol et régimes de feu dans le Gran Chaco. L’occupation du sol ESA-CCI MRLC en 2001 et 2022 est présentée en (a–b), les transitions forestières en (c) et les événements de feu FRYv2.0 (2001–2022) par taille en (d)."
+                  >
+                    <img
+                      src="img/preprint2025_fig4.png"
+                      alt="San Martín et al. (2025) preprint Fig. 4"
+                      class="w-full rounded-2xl border"
+                      style="border-color: var(--border);"
+                    />
+                  </button>
+                  <figcaption class="mt-3 text-sm app-muted leading-relaxed">
+                    <span
+                      data-en="San Martín et al. (2025) preprint, Fig. 4 (Gran Chaco). Land cover and fire patterns in the Gran Chaco. ESA-CCI MRLC land cover in 2001 and 2022 is shown in (a–b), forest transitions in (c), and FRYv2.0 fire events (2001–2022) by fire size in (d)."
+                      data-es="Preprint San Martín et al. (2025), Fig. 4 (Gran Chaco). Cobertura del suelo y patrones de fuego en el Gran Chaco. La cobertura del suelo ESA-CCI MRLC en 2001 y 2022 se muestra en (a–b), las transiciones forestales en (c) y los eventos de fuego FRYv2.0 (2001–2022) por tamaño en (d)."
+                      data-fr="Prépublication San Martín et al. (2025), Fig. 4 (Gran Chaco). Occupation du sol et régimes de feu dans le Gran Chaco. L’occupation du sol ESA-CCI MRLC en 2001 et 2022 est présentée en (a–b), les transitions forestières en (c) et les événements de feu FRYv2.0 (2001–2022) par taille en (d)."
+                    ></span>
+                  </figcaption>
+                </figure>
+              </div>
 
               <!-- 2025 Fig 7 -->
-              <figure>
-                <button
-                  type="button"
-                  class="block w-full text-left"
-                  data-zoom-src="img/preprint2025_fig7.png"
-                  data-zoom-alt="San Martín et al. (2025) preprint Fig. 7"
-                  data-caption-en="San Martín et al. (2025) preprint, Fig. 7 (Gran Chaco). Spatial contrasts in burned-area versus fire-weather (FWI) correlations, highlighting regional heterogeneity."
-                  data-caption-es="Preprint San Martín et al. (2025), Fig. 7 (Gran Chaco). Contrastes espaciales en la correlación entre área quemada y clima de incendios (FWI), mostrando heterogeneidad regional."
-                  data-caption-fr="Prépublication San Martín et al. (2025), Fig. 7 (Gran Chaco). Contrastes spatiaux des corrélations entre surface brûlée et conditions de feu (FWI), soulignant l’hétérogénéité régionale."
-                >
-                  <img
-                    src="img/preprint2025_fig7.png"
-                    alt="San Martín et al. (2025) preprint Fig. 7"
-                    class="w-full rounded-2xl border"
-                    style="border-color: var(--border);"
-                  />
-                </button>
-                <figcaption class="mt-3 text-sm app-muted leading-relaxed">
-                  <span
-                    data-en="San Martín et al. (2025) preprint, Fig. 7 (Gran Chaco). Spatial contrasts in burned-area versus fire-weather (FWI) correlations, highlighting regional heterogeneity."
-                    data-es="Preprint San Martín et al. (2025), Fig. 7 (Gran Chaco). Contrastes espaciales en la correlación entre área quemada y clima de incendios (FWI), mostrando heterogeneidad regional."
-                    data-fr="Prépublication San Martín et al. (2025), Fig. 7 (Gran Chaco). Contrastes spatiaux des corrélations entre surface brûlée et conditions de feu (FWI), soulignant l’hétérogénéité régionale."
-                  ></span>
-                </figcaption>
-              </figure>
+              <div class="app-card rounded-3xl p-4">
+                <figure>
+                  <button
+                    type="button"
+                    class="block w-full text-left"
+                    data-zoom-src="img/preprint2025_fig7.png"
+                    data-zoom-alt="San Martín et al. (2025) preprint Fig. 7"
+                    data-caption-en="San Martín et al. (2025) preprint, Fig. 7 (Gran Chaco). Spatial contrasts in burned-area versus fire-weather (FWI) correlations, highlighting regional heterogeneity."
+                    data-caption-es="Preprint San Martín et al. (2025), Fig. 7 (Gran Chaco). Contrastes espaciales en la correlación entre área quemada y clima de incendios (FWI), mostrando heterogeneidad regional."
+                    data-caption-fr="Prépublication San Martín et al. (2025), Fig. 7 (Gran Chaco). Contrastes spatiaux des corrélations entre surface brûlée et conditions de feu (FWI), soulignant l’hétérogénéité régionale."
+                  >
+                    <img
+                      src="img/preprint2025_fig7.png"
+                      alt="San Martín et al. (2025) preprint Fig. 7"
+                      class="w-full rounded-2xl border"
+                      style="border-color: var(--border);"
+                    />
+                  </button>
+                  <figcaption class="mt-3 text-sm app-muted leading-relaxed">
+                    <span
+                      data-en="San Martín et al. (2025) preprint, Fig. 7 (Gran Chaco). Spatial contrasts in burned-area versus fire-weather (FWI) correlations, highlighting regional heterogeneity."
+                      data-es="Preprint San Martín et al. (2025), Fig. 7 (Gran Chaco). Contrastes espaciales en la correlación entre área quemada y clima de incendios (FWI), mostrando heterogeneidad regional."
+                      data-fr="Prépublication San Martín et al. (2025), Fig. 7 (Gran Chaco). Contrastes spatiaux des corrélations entre surface brûlée et conditions de feu (FWI), soulignant l’hétérogénéité régionale."
+                    ></span>
+                  </figcaption>
+                </figure>
+              </div>
 
               <!-- 2023 Fig 3 -->
-              <figure>
-                <button
-                  type="button"
-                  class="block w-full text-left"
-                  data-zoom-src="img/Figure3_Boxplots_Burned%20Area_Dry_Wet_together_2001-2019.png"
-                  data-zoom-alt="San Martín et al. (2023) Fig. 3"
-                  data-caption-en="San Martín et al. (2023), Fig. 3 (Gran Chaco). Fire seasonality (2001-2019): Dry Chaco is unimodal (winter dry season), while Wet Chaco is bimodal (summer wet season plus winter dry season)."
-                  data-caption-es="San Martín et al. (2023), Fig. 3 (Gran Chaco). Estacionalidad del fuego (2001-2019): el Chaco seco es unimodal (estación seca invernal), mientras que el Chaco húmedo es bimodal (verano húmedo más estación seca invernal)."
-                  data-caption-fr="San Martín et al. (2023), Fig. 3 (Gran Chaco). Saisonnalité des feux (2001-2019) : le Chaco sec est unimodal (saison sèche hivernale), tandis que le Chaco humide est bimodal (été humide plus saison sèche hivernale)."
-                >
-                  <img
-                    src="img/Figure3_Boxplots_Burned%20Area_Dry_Wet_together_2001-2019.png"
-                    alt="San Martín et al. (2023) Fig. 3"
-                    class="w-full rounded-2xl border"
-                    style="border-color: var(--border);"
-                  />
-                </button>
-                <figcaption class="mt-3 text-sm app-muted leading-relaxed">
-                  <span
-                    data-en="San Martín et al. (2023), Fig. 3 (Gran Chaco). Fire seasonality (2001-2019): Dry Chaco is unimodal (winter dry season), while Wet Chaco is bimodal (summer wet season plus winter dry season)."
-                    data-es="San Martín et al. (2023), Fig. 3 (Gran Chaco). Estacionalidad del fuego (2001-2019): el Chaco seco es unimodal (estación seca invernal), mientras que el Chaco húmedo es bimodal (verano húmedo más estación seca invernal)."
-                    data-fr="San Martín et al. (2023), Fig. 3 (Gran Chaco). Saisonnalité des feux (2001-2019) : le Chaco sec est unimodal (saison sèche hivernale), tandis que le Chaco humide est bimodal (été humide plus saison sèche hivernale)."
-                  ></span>
-                </figcaption>
-              </figure>
+              <div class="app-card rounded-3xl p-4">
+                <figure>
+                  <button
+                    type="button"
+                    class="block w-full text-left"
+                    data-zoom-src="img/Figure3_Boxplots_Burned%20Area_Dry_Wet_together_2001-2019.png"
+                    data-zoom-alt="San Martín et al. (2023) Fig. 3"
+                    data-caption-en="San Martín et al. (2023), Fig. 3 (Gran Chaco). Fire seasonality (2001-2019): Dry Chaco is unimodal (winter dry season), while Wet Chaco is bimodal (summer wet season plus winter dry season)."
+                    data-caption-es="San Martín et al. (2023), Fig. 3 (Gran Chaco). Estacionalidad del fuego (2001-2019): el Chaco seco es unimodal (estación seca invernal), mientras que el Chaco húmedo es bimodal (verano húmedo más estación seca invernal)."
+                    data-caption-fr="San Martín et al. (2023), Fig. 3 (Gran Chaco). Saisonnalité des feux (2001-2019) : le Chaco sec est unimodal (saison sèche hivernale), tandis que le Chaco humide est bimodal (été humide plus saison sèche hivernale)."
+                  >
+                    <img
+                      src="img/Figure3_Boxplots_Burned%20Area_Dry_Wet_together_2001-2019.png"
+                      alt="San Martín et al. (2023) Fig. 3"
+                      class="w-full rounded-2xl border"
+                      style="border-color: var(--border);"
+                    />
+                  </button>
+                  <figcaption class="mt-3 text-sm app-muted leading-relaxed">
+                    <span
+                      data-en="San Martín et al. (2023), Fig. 3 (Gran Chaco). Fire seasonality (2001-2019): Dry Chaco is unimodal (winter dry season), while Wet Chaco is bimodal (summer wet season plus winter dry season)."
+                      data-es="San Martín et al. (2023), Fig. 3 (Gran Chaco). Estacionalidad del fuego (2001-2019): el Chaco seco es unimodal (estación seca invernal), mientras que el Chaco húmedo es bimodal (verano húmedo más estación seca invernal)."
+                      data-fr="San Martín et al. (2023), Fig. 3 (Gran Chaco). Saisonnalité des feux (2001-2019) : le Chaco sec est unimodal (saison sèche hivernale), tandis que le Chaco humide est bimodal (été humide plus saison sèche hivernale)."
+                    ></span>
+                  </figcaption>
+                </figure>
+              </div>
+
 
               <!-- 2023 Fig 7 -->
-              <figure>
-                <button
-                  type="button"
-                  class="block w-full text-left"
-                  data-zoom-src="img/Figure7_Dry_and_Wet_Forest_Loss_Fire_Lag_Histogram.jpg"
-                  data-zoom-alt="San Martín et al. (2023) Fig. 7"
-                  data-caption-en="San Martín et al. (2023), Fig. 7 (Gran Chaco). Time lag between fire detection and deforestation detection (2001-2019). Bars before N indicate deforestation preceding fires, especially in Dry Chaco, consistent with clearing followed by burning after biomass dries."
-                  data-caption-es="San Martín et al. (2023), Fig. 7 (Gran Chaco). Desfase temporal entre detección de fuego y detección de deforestación (2001-2019). Barras antes de N indican deforestación antes del fuego, especialmente en Chaco seco, consistente con desmonte seguido de quema cuando la biomasa se seca."
-                  data-caption-fr="San Martín et al. (2023), Fig. 7 (Gran Chaco). Décalage temporel entre détection des feux et détection de la déforestation (2001-2019). Les barres avant N indiquent une déforestation précédant les feux, surtout dans le Chaco sec, cohérent avec un défrichement suivi d’un brûlage après dessiccation de la biomasse."
-                >
-                  <img
-                    src="img/Figure7_Dry_and_Wet_Forest_Loss_Fire_Lag_Histogram.jpg"
-                    alt="San Martín et al. (2023) Fig. 7"
-                    class="w-full rounded-2xl border"
-                    style="border-color: var(--border);"
-                  />
-                </button>
-                <figcaption class="mt-3 text-sm app-muted leading-relaxed">
-                  <span
-                    data-en="San Martín et al. (2023), Fig. 7 (Gran Chaco). Time lag between fire detection and deforestation detection (2001-2019). Bars before N indicate deforestation preceding fires, especially in Dry Chaco, consistent with clearing followed by burning after biomass dries."
-                    data-es="San Martín et al. (2023), Fig. 7 (Gran Chaco). Desfase temporal entre detección de fuego y detección de deforestación (2001-2019). Barras antes de N indican deforestación antes del fuego, especialmente en Chaco seco, consistente con desmonte seguido de quema cuando la biomasa se seca."
-                    data-fr="San Martín et al. (2023), Fig. 7 (Gran Chaco). Décalage temporel entre détection des feux et détection de la déforestation (2001-2019). Les barres avant N indiquent une déforestation précédant les feux, surtout dans le Chaco sec, cohérent avec un défrichement suivi d’un brûlage après dessiccation de la biomasse."
-                  ></span>
-                </figcaption>
-              </figure>
+              <div class="app-card rounded-3xl p-4">              
+                <figure>
+                  <button
+                    type="button"
+                    class="block w-full text-left"
+                    data-zoom-src="img/Figure7_Dry_and_Wet_Forest_Loss_Fire_Lag_Histogram.jpg"
+                    data-zoom-alt="San Martín et al. (2023) Fig. 7"
+                    data-caption-en="San Martín et al. (2023), Fig. 7 (Gran Chaco). Time lag between fire detection and deforestation detection (2001-2019). Bars before N indicate deforestation preceding fires, especially in Dry Chaco, consistent with clearing followed by burning after biomass dries."
+                    data-caption-es="San Martín et al. (2023), Fig. 7 (Gran Chaco). Desfase temporal entre detección de fuego y detección de deforestación (2001-2019). Barras antes de N indican deforestación antes del fuego, especialmente en Chaco seco, consistente con desmonte seguido de quema cuando la biomasa se seca."
+                    data-caption-fr="San Martín et al. (2023), Fig. 7 (Gran Chaco). Décalage temporel entre détection des feux et détection de la déforestation (2001-2019). Les barres avant N indiquent une déforestation précédant les feux, surtout dans le Chaco sec, cohérent avec un défrichement suivi d’un brûlage après dessiccation de la biomasse."
+                  >
+                    <img
+                      src="img/Figure7_Dry_and_Wet_Forest_Loss_Fire_Lag_Histogram.jpg"
+                      alt="San Martín et al. (2023) Fig. 7"
+                      class="w-full rounded-2xl border"
+                      style="border-color: var(--border);"
+                    />
+                  </button>
+                  <figcaption class="mt-3 text-sm app-muted leading-relaxed">
+                    <span
+                      data-en="San Martín et al. (2023), Fig. 7 (Gran Chaco). Time lag between fire detection and deforestation detection (2001-2019). Bars before N indicate deforestation preceding fires, especially in Dry Chaco, consistent with clearing followed by burning after biomass dries."
+                      data-es="San Martín et al. (2023), Fig. 7 (Gran Chaco). Desfase temporal entre detección de fuego y detección de deforestación (2001-2019). Barras antes de N indican deforestación antes del fuego, especialmente en Chaco seco, consistente con desmonte seguido de quema cuando la biomasa se seca."
+                      data-fr="San Martín et al. (2023), Fig. 7 (Gran Chaco). Décalage temporel entre détection des feux et détection de la déforestation (2001-2019). Les barres avant N indiquent une déforestation précédant les feux, surtout dans le Chaco sec, cohérent avec un défrichement suivi d’un brûlage après dessiccation de la biomasse."
+                    ></span>
+                  </figcaption>
+                </figure>
+              </div>
+                
             </div>
           </section>
 
@@ -1103,6 +1132,19 @@
 
         const themeToggle = document.getElementById("theme-toggle");
         if (themeToggle) themeToggle.setAttribute("aria-label", lang === "fr" ? "Changer le thème" : lang === "es" ? "Cambiar tema" : "Toggle theme");
+        // Sync right rail buttons (if present)
+        const railButtons = [railEn, railEs, railFr].filter(Boolean);
+        railButtons.forEach((b) => b.classList.remove("app-chip"));
+        if (state.lang === "en" && railEn) railEn.classList.add("app-chip");
+        if (state.lang === "es" && railEs) railEs.classList.add("app-chip");
+        if (state.lang === "fr" && railFr) railFr.classList.add("app-chip");
+        
+        // Sync right rail theme label (if present)
+        const railThemeLabel = document.getElementById("theme-label-rail");
+        if (railThemeLabel) {
+          const theme = document.documentElement.getAttribute("data-theme") || "light";
+          railThemeLabel.textContent = theme === "dark" ? "Light" : "Dark";
+        }
       }
 
       function setLanguage(lang) {
@@ -1134,10 +1176,26 @@
         document.documentElement.setAttribute("data-theme", next);
         localStorage.setItem("theme", next);
         updateThemeLabel(next);
+        applyLanguage();
       }
 
       document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
 
+      // Right rail language buttons (desktop)
+      const railEn = document.getElementById("lang-en-rail");
+      const railEs = document.getElementById("lang-es-rail");
+      const railFr = document.getElementById("lang-fr-rail");
+      
+      if (railEn) railEn.addEventListener("click", () => setLanguage("en"));
+      if (railEs) railEs.addEventListener("click", () => setLanguage("es"));
+      if (railFr) railFr.addEventListener("click", () => setLanguage("fr"));
+      
+      // Right rail theme toggle (desktop)
+      const themeToggleRail = document.getElementById("theme-toggle-rail");
+      if (themeToggleRail) themeToggleRail.addEventListener("click", toggleTheme);
+
+
+      
       function openModal(modal) {
         modal.classList.remove("hidden");
         modal.classList.add("flex");
@@ -1311,5 +1369,17 @@
 
       
     </script>
+    
+    <!-- Back to top button -->
+    <button
+      id="back-to-top"
+      type="button"
+      class="hidden fixed bottom-5 right-5 z-40 focus-ring app-card rounded-2xl px-4 py-2 text-sm font-semibold"
+      data-en="Back to top"
+      data-es="Volver arriba"
+      data-fr="Retour en haut"
+      aria-label="Back to top"
+    ></button>
+    
   </body>
 </html>
