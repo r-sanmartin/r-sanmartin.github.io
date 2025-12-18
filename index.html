@@ -225,6 +225,13 @@
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
           <nav class="app-card rounded-2xl px-3 py-2 flex flex-wrap items-center gap-2">
             <a
+              class="focus-ring text-sm font-semibold px-3 py-1 rounded-xl"
+              href="#bio"
+              data-en="Bio"
+              data-es="Bio"
+              data-fr="Bio"
+            ></a>
+            <a
               class="focus-ring text-sm font-semibold px-3 py-1 rounded-xl app-chip"
               href="#latest-research"
               data-en="Latest research"
@@ -313,54 +320,37 @@
               </div>
             </div>
 
-            <!-- Contact moved before stats + profiles; institutional first -->
-            <div class="mt-5">
-              <div class="text-sm font-bold" data-en="Contact" data-es="Contacto" data-fr="Contact"></div>
-              <div class="mt-2 space-y-2 text-sm">
-                <div>
-                  <div
-                    class="text-xs font-semibold tracking-widest app-muted uppercase"
-                    data-en="Institutional"
-                    data-es="Institucional"
-                    data-fr="Institutionnel"
-                  ></div>
-                  <a class="app-link font-semibold" href="mailto:rodrigo.sanmartin@lsce.ipsl.fr"
-                    >rodrigo.sanmartin@lsce.ipsl.fr</a
-                  >
-                </div>
-                <div>
-                  <div
-                    class="text-xs font-semibold tracking-widest app-muted uppercase"
-                    data-en="Personal"
-                    data-es="Personal"
-                    data-fr="Personnel"
-                  ></div>
-                  <a class="app-link font-semibold" href="mailto:rodrigo.climatechange@gmail.com"
-                    >rodrigo.climatechange@gmail.com</a
-                  >
-                </div>
-
-                <div class="pt-2 text-sm app-muted prose-like">
-                  <div class="font-semibold" style="color: var(--text);">
-                    Laboratoire des Sciences du Climat et de l'Environnement
-                  </div>
-                  <a href="http://www.lsce.ipsl.fr/" target="_blank" rel="noreferrer">http://www.lsce.ipsl.fr/</a>
-                  <div>LSCE/IPSL/CEA-CNRS-UVSQ, UMR 8212</div>
-                  <div>Centre d'Etudes de Saclay, Orme des Merisiers</div>
-                  <div>91191 Gif-sur-Yvette, FRANCE</div>
-                </div>
-
-                <button
-                  id="open-privacy"
-                  class="focus-ring app-link underline text-sm mt-2"
-                  type="button"
-                  data-en="Privacy & analytics settings"
-                  data-es="Privacidad y analíticas"
-                  data-fr="Paramètres de confidentialité et d’analytique"
-                ></button>
-              </div>
+            <!-- Profiles (no title) -->
+            <div class="mt-5 flex flex-wrap gap-2">
+              <a
+                class="focus-ring app-card rounded-xl px-2.5 py-1.5 text-sm font-semibold app-link"
+                href="https://orcid.org/0000-0003-2434-250X"
+                target="_blank"
+                rel="noreferrer"
+              >
+                ORCID
+              </a>
+            
+              <a
+                class="focus-ring app-card rounded-xl px-2.5 py-1.5 text-sm font-semibold app-link"
+                href="https://scholar.google.com/citations?user=rDzMceIAAAAJ&hl=es"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Google Scholar
+              </a>
+            
+              <a
+                class="focus-ring app-card rounded-xl px-2.5 py-1.5 text-sm font-semibold app-link"
+                href="https://www.researchgate.net/profile/Rodrigo-San-Martin-7"
+                target="_blank"
+                rel="noreferrer"
+              >
+                ResearchGate
+              </a>
             </div>
-
+            
+            <!-- Stats (moved before Contact) -->
             <div class="mt-5 app-card rounded-2xl p-4">
               <div
                 class="text-xs font-semibold tracking-widest app-muted uppercase"
@@ -368,6 +358,7 @@
                 data-es="Estadísticas diciembre 2025"
                 data-fr="Statistiques décembre 2025"
               ></div>
+            
               <div class="mt-2">
                 <div class="text-sm font-bold">Google Scholar</div>
                 <div class="app-muted text-sm">
@@ -379,48 +370,110 @@
                 </div>
               </div>
             </div>
-
-            <div class="mt-4">
-              <div class="text-sm font-bold" data-en="Profiles" data-es="Perfiles" data-fr="Profils"></div>
+            
+            <!-- Contact -->
+            <div class="mt-5">
+              <div class="text-sm font-bold" data-en="Contact" data-es="Contacto" data-fr="Contact"></div>
+            
+              <div class="mt-2 space-y-2 text-sm">
+                <div>
+                  <div
+                    class="text-xs font-semibold tracking-widest app-muted uppercase"
+                    data-en="Institutional"
+                    data-es="Institucional"
+                    data-fr="Institutionnel"
+                  ></div>
+                  <a class="app-link font-semibold" href="mailto:rodrigo.sanmartin@lsce.ipsl.fr">rodrigo.sanmartin@lsce.ipsl.fr</a>
+                </div>
+            
+                <div>
+                  <div
+                    class="text-xs font-semibold tracking-widest app-muted uppercase"
+                    data-en="Personal"
+                    data-es="Personal"
+                    data-fr="Personnel"
+                  ></div>
+                  <a class="app-link font-semibold" href="mailto:rodrigo.climatechange@gmail.com">rodrigo.climatechange@gmail.com</a>
+                </div>
+            
+                <div class="pt-2 text-sm app-muted prose-like">
+                  <div class="font-semibold" style="color: var(--text);">
+                    Laboratoire des Sciences du Climat et de l'Environnement
+                  </div>
+                  <a href="http://www.lsce.ipsl.fr/" target="_blank" rel="noreferrer">http://www.lsce.ipsl.fr/</a>
+                  <div>LSCE/IPSL/CEA-CNRS-UVSQ, UMR 8212</div>
+                  <div>Centre d'Etudes de Saclay, Orme des Merisiers</div>
+                  <div>91191 Gif-sur-Yvette, FRANCE</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Codes -->
+            <div class="mt-5">
+              <div class="text-sm font-bold" data-en="Codes" data-es="Códigos" data-fr="Codes"></div>
+            
               <div class="mt-2 flex flex-wrap gap-2">
-                <a
-                  class="focus-ring app-card rounded-xl px-2.5 py-1.5 text-sm font-semibold app-link"
-                  href="https://orcid.org/0000-0003-2434-250X"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ORCID
-                </a>
-                <a
-                  class="focus-ring app-card rounded-xl px-2.5 py-1.5 text-sm font-semibold app-link"
-                  href="https://scholar.google.com/citations?user=rDzMceIAAAAJ&hl=es"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Google Scholar
-                </a>
-                <a
-                  class="focus-ring app-card rounded-xl px-2.5 py-1.5 text-sm font-semibold app-link"
-                  href="https://www.researchgate.net/profile/Rodrigo-San-Martin-7"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ResearchGate
-                </a>
                 <a
                   class="focus-ring app-card rounded-xl px-2.5 py-1.5 text-sm font-semibold app-link"
                   href="https://github.com/Roderick-SM"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  GitHub (code)
+                  GitHub
                 </a>
               </div>
+            </div>
+            
+            <!-- Privacy (moved to bottom of sidebar) -->
+            <div class="mt-5">
+              <button
+                id="open-privacy"
+                class="focus-ring app-link underline text-sm"
+                type="button"
+                data-en="Privacy & analytics settings"
+                data-es="Privacidad y analíticas"
+                data-fr="Paramètres de confidentialité et d’analytique"
+              ></button>
+            </div>
+              </div>              
             </div>
           </div>
         </aside>
 
         <main class="space-y-10">
+
+          <section id="bio">
+          <div class="flex items-baseline justify-between gap-4">
+            <h2
+              class="text-2xl font-extrabold"
+              data-en="Bio"
+              data-es="Bio"
+              data-fr="Bio"
+            ></h2>
+          </div>
+        
+          <div class="mt-4 app-card rounded-3xl p-6 prose-like">
+            <p data-en="I study land use and land use change processes, with a particular focus on deforestation and its links with fire activity. During my PhD and subsequent research, I have focused on dry and humid forest ecosystems of the South American Gran Chaco, combining remote sensing, climate data, and fire observations to understand the interactions between climate variability, human land use, and fire regimes."></p>
+        
+            <p data-en="Since 2020, I have been working at the Laboratoire des Sciences du Climat et de l’Environnement (LSCE, CNRS), where I collaborate on land surface and climate-oriented projects. In parallel, I contribute to ESA Climate Change Initiative activities, particularly the Medium and High Resolution Land Cover projects."></p>
+        
+            <p data-en="More recently, I have started extending my research to other regions, including Southeast Asia and southern Africa, to explore land-use, fire, and climate interactions across contrasting socio-environmental contexts."></p>
+        
+            <p data-es="Estudio los procesos de uso del suelo y cambio de uso del suelo, con especial atención a la deforestación y sus vínculos con la actividad de incendios. Durante mi doctorado y trabajos posteriores, me enfoqué en los ecosistemas de bosques secos y húmedos del Gran Chaco sudamericano, combinando datos satelitales, información climática y observaciones de fuego para comprender las interacciones entre la variabilidad climática, el uso humano del territorio y los regímenes de incendios."></p>
+        
+            <p data-es="Desde 2020 trabajo en el Laboratoire des Sciences du Climat et de l’Environnement (LSCE, CNRS), donde participo en proyectos orientados a la superficie terrestre y al clima. En paralelo, colaboro con iniciativas de la Climate Change Initiative de la ESA, en particular en los proyectos de cobertura del suelo de resolución media y alta."></p>
+        
+            <p data-es="Más recientemente, comencé a extender este enfoque a otras regiones, como el sudeste asiático y el sur de África, con el objetivo de analizar las interacciones entre uso del suelo, incendios y clima en distintos contextos socioambientales."></p>
+        
+            <p data-fr="Mes travaux portent sur les processus d’usage des terres et de changement d’usage des terres, avec une attention particulière à la déforestation et à ses liens avec l’activité des feux. Durant ma thèse et mes recherches ultérieures, je me suis concentré sur les écosystèmes de forêts sèches et humides du Gran Chaco sud-américain, en combinant données de télédétection, informations climatiques et observations des feux afin d’analyser les interactions entre variabilité climatique, usages humains du territoire et régimes de feu."></p>
+        
+            <p data-fr="Je travaille au Laboratoire des Sciences du Climat et de l’Environnement (LSCE, CNRS) depuis 2020, où je contribue à des projets liés aux surfaces continentales et au climat. En parallèle, je collabore aux activités de la Climate Change Initiative de l’ESA, notamment dans le cadre des projets de couverture du sol à résolution moyenne et haute."></p>
+        
+            <p data-fr="Plus récemment, j’ai commencé à étendre ces travaux à d’autres régions, notamment l’Asie du Sud-Est et l’Afrique australe, afin d’explorer les interactions entre usages des terres, feux et climat dans des contextes socio-environnementaux contrastés."></p>
+          </div>
+        </section>
+
+          
           <section id="latest-research">
             <div class="flex items-baseline justify-between gap-4">
               <h2
